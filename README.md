@@ -59,20 +59,60 @@ This will spawn a new blockchain that `listens on 127.0.0.1:8545` by default.
 Once ganache is running, follow the below to setup the dapp.
 
 ## Installation
+Clone the project
 1. `git clone https://github.com/atlanticstarr1/dollarbank.git`
 2. `cd dollarbank`
-Compile
+Compile the contracts
 3. `truffle compile`
 Migrate to ganache blockchain
+If you haven't already, download Ganache and double click the icon to launch the application. This will generate a blockchain running locally on port 7545.
 4. `truffle migrate --reset`
-Test. All tests should pass.
+Test the smart contracts
 5. `truffle test`
-Install React front-end.
+Install React UI to interact with smart contract
 6. `cd app`
 7. `npm install`
 8. `npm start`
 
-_Navigate to localhost:3000 using Chrome to view the app_
+_Navigate to localhost:3000 in your browser to view the dapp_
+
+Interacting with the dapp in a browser
+Now we're ready to use our dapp!
+
+Installing and configuring MetaMask
+The easiest way to interact with our dapp in a browser is through MetaMask, a browser extension for both Chrome and Firefox.
+
+1. Install MetaMask in your browser.
+2. Once installed, a tab in your browser should open, with a Get Started button
+3. After clicking Get Started, you should see the initial MetaMask screen. Click Import Wallet.
+4. Next, you should see a screen requesting anonymous analytics. Choose to decline or agree.
+5. In the box marked Wallet Seed, enter the mnemonic that is displayed in Ganache.
+5. Enter a password below that and click OK.
+6. If all goes well, MetaMask should display a Congratulations screen. Click All Done.
+7. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows "Main Network" and select Custom RPC.
+8. In the box titled "New Network" enter http://127.0.0.1:7545 and click Save.
+The network name at the top will switch to say http://127.0.0.1:7545.
+9. Click the top-right X to close out of Settings and return to the Accounts page.
+
+Each account created by Ganache is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run.
+
+Configuration is now complete.
+
+Using the dapp
+1. _Navigate to localhost:3000_
+The dapp welcome screen is shown.
+2. Click on 'Connect using metamask' button.
+3. A MetaMask pop-up should appear requesting your approval to allow Dollar Bank App to connect to your MetaMask wallet. Without explicit approval, you will be unable to interact with the dapp. Click Connect.
+4. To use the dapp, click the Enroll button at the bottom to enroll your current Metamask account.
+5. You'll be automatically prompted to approve the transaction by MetaMask. Click Submit to approve the transaction.
+6. You'll see a new card created titled 'Bank' with a current balace of 0 ETH.
+Note: If you do not see the 'Bank' card, refreshing the app in the browser should trigger it.
+And in MetaMask, you'll see the transaction listed.
+You'll also see the same transaction listed in Ganache under the "Transactions" section.
+Congratulations! You ar now on your way to a wealthier future :bowtie:
+
+7. Enter an amount of ETH to deposit, and click 'Deposit'
+
 
 ## METAMASK
 If not already installed, the dapp will prompt you to download Metamask (Ethereum wallet) Chrome extension. All interactions with the dapp will happen through Metamask.
