@@ -50,10 +50,10 @@ This will spawn a new blockchain that listens on `127.0.0.1:8545` by default.
 Once ganache is running, follow the below to setup the dapp.
 
 ## Installation
->> Clone the project
+> Clone the project
 1. `git clone https://github.com/atlanticstarr1/dollarbank.git`
 2. `cd dollarbank`
->> Compile the contracts
+> Compile the contracts
 3. `truffle compile`
 >> Migrate to ganache blockchain
 4. `truffle migrate --reset`
