@@ -55,11 +55,11 @@ Once ganache is running, follow the below to setup the dapp.
 2. `cd dollarbank`
 > Compile the contracts
 3. `truffle compile`
->> Migrate to ganache blockchain
+> Migrate to ganache blockchain
 4. `truffle migrate --reset`
->> Test the smart contracts
+> Test the smart contracts
 5. `truffle test`
->> Install React app to interact with smart contract
+> Install React app to interact with smart contract
 6. `cd app`
 7. `npm install`
 8. `npm start`
