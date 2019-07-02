@@ -45,12 +45,11 @@ open up a new terminal, and run the following command:
 
 `ganache-cli`
 
-This will spawn a new blockchain that `listens on 127.0.0.1:8545` by default.
+This will spawn a new blockchain that listens on `127.0.0.1:8545` by default.
 
 Once ganache is running, follow the below to setup the dapp.
 
 ## Installation
-Clone the project
 1. `git clone https://github.com/atlanticstarr1/dollarbank.git`
 2. `cd dollarbank`
 Compile the contracts
