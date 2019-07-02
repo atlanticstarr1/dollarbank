@@ -50,18 +50,19 @@ This will spawn a new blockchain that listens on `127.0.0.1:8545` by default.
 Once ganache is running, follow the below to setup the dapp.
 
 ## Installation
-1. `git clone https://github.com/atlanticstarr1/dollarbank.git`
-2. `cd dollarbank`
-Compile the contracts
-3. `truffle compile`
-Migrate to ganache blockchain
-4. `truffle migrate --reset`
-Test the smart contracts
-5. `truffle test`
-Install React app to interact with smart contract
-6. `cd app`
-7. `npm install`
-8. `npm start`
+> Clone the project
+>> 1. `git clone https://github.com/atlanticstarr1/dollarbank.git`
+>> 2. `cd dollarbank`
+> Compile the contracts
+>> 3. `truffle compile`
+> Migrate to ganache blockchain
+>> 4. `truffle migrate --reset`
+> Test the smart contracts
+>> 5. `truffle test`
+> Install React app to interact with smart contract
+>> 6. `cd app`
+>> 7. `npm install`
+>> 8. `npm start`
 
 ## Interacting with the dapp in a browser
 Now we're ready to use our dapp!
