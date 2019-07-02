@@ -4,7 +4,7 @@ Welcome to dollar bank; a new concept in banking. This dapp is built using Ether
 
 The USD/ETH exchange rates are fed to the contract using a Rhombus Lighthouse Oracle. The rate fed to the contract is 10 cents (USD) worth of ETH, which can then be used to determine which customers get interests, by converting balances to USD and vice-versa.
 
-## FEATURES
+## Features
   * Enroll accounts
   * Make deposits (Min 1 USD to get interest)
   * Make Withdrawals
@@ -50,24 +50,24 @@ This will spawn a new blockchain that listens on `127.0.0.1:8545` by default.
 Once ganache is running, follow the below to setup the dapp.
 
 ## Installation
-> Clone the project
->> 1. `git clone https://github.com/atlanticstarr1/dollarbank.git`
->> 2. `cd dollarbank`
-> Compile the contracts
->> 3. `truffle compile`
-> Migrate to ganache blockchain
->> 4. `truffle migrate --reset`
-> Test the smart contracts
->> 5. `truffle test`
-> Install React app to interact with smart contract
->> 6. `cd app`
->> 7. `npm install`
->> 8. `npm start`
+>> Clone the project
+1. `git clone https://github.com/atlanticstarr1/dollarbank.git`
+2. `cd dollarbank`
+>> Compile the contracts
+3. `truffle compile`
+>> Migrate to ganache blockchain
+4. `truffle migrate --reset`
+>> Test the smart contracts
+5. `truffle test`
+>> Install React app to interact with smart contract
+6. `cd app`
+7. `npm install`
+8. `npm start`
 
 ## Interacting with the dapp in a browser
 Now we're ready to use our dapp!
 
-## Installing and configuring MetaMask
+### Installing and configuring MetaMask
 The easiest way to interact with our dapp in a browser is through MetaMask, a browser extension for both Chrome and Firefox.
 
 1. Install MetaMask in your browser.
@@ -86,7 +86,7 @@ Each account created by Ganache is given 100 ether. You'll notice it's slightly 
 
 Configuration is now complete.
 
-## Using the dapp
+### Using the dapp
 1. Navigate to `localhost:3000`
 The dapp welcome screen is shown.
 2. Click on 'Connect using metamask' button.
@@ -100,16 +100,3 @@ You'll also see the same transaction listed in Ganache under the "Transactions" 
 Congratulations! You ar now on your way to a wealthier future :bowtie:
 
 7. Enter an amount of ETH to deposit, and click 'Deposit'
-
-
-## METAMASK
-If not already installed, the dapp will prompt you to download Metamask (Ethereum wallet) Chrome extension. All interactions with the dapp will happen through Metamask.
-
-1. Once added to Chrome, open Metamask.
-2. Connect to the correct network. In our case it would be localhost:<PORT>, where <PORT> is the port ganache is running (noted earlier)
-2. Click on "Import using account seed phrase" at the bottom of Metamask and paste the 12 word seed/mnemonic (noted earlier).
-3. Set your wallet password.
-4. Click Restore.
-5. Reload app in browser
-  
-  HAVE FUN !!! :):)
