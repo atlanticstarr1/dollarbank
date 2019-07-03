@@ -90,11 +90,14 @@ The dapp welcome screen is shown.
 
 Now we're ready to use our dapp!!
 
-First, **ENROLL AN ACCOUNT**
+**ENROLL AN ACCOUNT**
 1. Click the Enroll button at the bottom to enroll your current Metamask account.
-5. You'll be prompted to approve the transaction by MetaMask. Click **Confirm** to approve the transaction.
-6. You'll see a new card created titled **Bank Account** with a current balace of 0 ETH.
-Note: If you do not see the **Bank Accout** card, refresh the app in the browser.
+2. You'll be prompted to approve the transaction by MetaMask. Click **Confirm** to approve the transaction.
+3. You'll see a new card created titled **Bank Account** with a current balace of 0 ETH.
+
+*Note: If you do not see the **Bank Accout** card, refresh the app in the browser.*
+
 And in MetaMask, you'll see the transaction listed.
+
 You'll also see the same transaction listed in Ganache under the "Transactions" section.
 Congratulations! You ar now on your way to a wealthier future :bowtie:
