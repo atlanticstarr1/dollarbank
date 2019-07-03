@@ -131,9 +131,12 @@ added to your account every 2 minutes!!! (DEMO purposes); In production, this wi
 3. Confirm the transaction in Metamask.
 4. Notice your wallet will be credited will the full bank account balance.
 
-###ADMIN###
-**Account 1** is the Administrator/Contract deployer address. As the admin, you will notice 2 buttons at the top of the Welcom card; **Bank Admin** and **Oracle Admin**.
+### ADMIN ###
+* **Account 1** is the Administrator/Contract deployer address. As the admin, you will notice 2 buttons at the top of the Welcom card; **Bank Admin** and **Oracle Admin**.
 
-**Bank Admin** shows a dashboard that allows you to have FULL control of the bank contract. From here you can pause the contract (circuit breaker pattern), start/stop interest payments, change the interest rate (1% - 6%) and min balance;min balance is the mininum balance you must have in your bank account to start gaining interest.
-
-You can also see all the accounts currently registered and maybe the most powerful feature, YOU can initiate interest payments by pressing the **Pay interest** button; *try it*
+**Bank Admin** shows a dashboard that allows you to have FULL control of the bank contract. From here you can:
+* Pause the contract (circuit breaker pattern)
+* Start/stop interest payments
+* Change the interest rate (1% - 6%) and min balance;min balance is the mininum balance you must have in your bank account to start gaining interest.
+ * You can also see all the accounts currently registered
+ * ... and maybe the most powerful feature, YOU can initiate interest payments by pressing the **Pay interest** button; *try it*
