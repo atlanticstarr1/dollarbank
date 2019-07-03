@@ -119,7 +119,7 @@ Congratulations! You ar now on your way to a wealthier future :bowtie:
 Now for the cool part ... :grin:
 
 **INTEREST PAYMENTS**
-If your balance is greater than or equal to the mininum balance *(default is 1 USD)* you will see interest being
+* If your balance is greater than or equal to the mininum balance *(default is 1 USD)* you will see interest being
 added to your account every 2 minutes!!! (DEMO purposes); In production, this will be changed to every 24 hrs.
 
-Also the value(*in USD*), of your balances will change daily depending on the value of ETH on that day. This data is fed into the contract using an Oracle. 
+* Also the value *(in USD)*, of your balances will change daily depending on the value of ETH on that day. This data is fed into the contract using an Oracle. 
