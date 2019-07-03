@@ -43,9 +43,9 @@ Before we move ahead, let's first launch our test blockchain with Ganache.
 
 open up a new terminal, and run the following command: 
 
-`ganache-cli`
+`ganache-cli -i 5777`
 
-This will spawn a new blockchain that listens on `127.0.0.1:8545` by default.
+This will spawn a new blockchain that listens on `127.0.0.1:8545` by default, with a network id of 5777.
 
 Once ganache is running, follow the below to setup the dapp.
 
