@@ -106,4 +106,20 @@ Congratulations! You ar now on your way to a wealthier future :bowtie:
 1. Enter a deposit amount in ETH.
 2. Click the **Deposit** button
 3. Confirm the transaction in Metamask.
-4. Your bank account balance should be updated once the transaction is confirmed :)
+4. Notice your wallet(debited) and bank account(credited) balance update accordingly. 
+*(May have slight delay based on confirmation speed)*
+
+**MAKE A WITHDRAWAL**
+1. Enter a withdrawal amount in ETH. 
+*(Tip: play with different amounts to see validations at work)*
+2. Click the **Withdraw** button
+3. Confirm the transaction in Metamask.
+4. Notice your wallet(credited) and bank account(debited) balance update accordingly.
+
+Now for the cool part ... :grin:
+
+**INTEREST PAYMENTS**
+If your balance is greater than or equal to the mininum balance *(default is 1 USD)* you will see interest being
+added to your account every 2 minutes!!! (DEMO purposes); In production, this will be changed to every 24 hrs.
+
+Also the value(*in USD*), of your balances will change daily depending on the value of ETH on that day. This data is fed into the contract using an Oracle. 
