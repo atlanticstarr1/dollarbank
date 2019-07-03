@@ -124,7 +124,11 @@ Now for the cool part ... :grin:
 * If your balance is greater than or equal to the mininum balance *(default is 1 USD)* you will see interest being
 added to your account every 2 minutes!!! (DEMO purposes); In production, this will be changed to every 24 hrs.
 
-* Also the value *(in USD)*, of your balances will change daily depending on the value of ETH on that day. This data is fed into the contract using an Oracle. 
+* Also the value *(in USD)*, of your balances will change daily depending on the value of ETH on that day. This data is fed into the contract using an Oracle.
+
+* IMP !!! After getting your interests payments, and you try withdrawing your full balance, if you get an error stating that the "Bank doesn't have enough money" (lol) .. it's because the bank needs to keep ETH on hand to pay its customers so in reality such a bank needs to have a process in place to generate revenue. 
+
+For our purposes, fund the bank with 1 ETH; using Metamask, simple send 1 ETH to the DollarBank contract address. That's it. The address is found when you *truffle migrated* earlier
 
 **CLOSE YOUR ACCOUNT**
 1. Click the **Close account** button.
@@ -140,3 +144,7 @@ added to your account every 2 minutes!!! (DEMO purposes); In production, this wi
 * Change the interest rate (1% - 6%) and min balance;min balance is the mininum balance you must have in your bank account to start gaining interest.
  * You can also see all the accounts currently registered
  * ... and maybe the most powerful feature, YOU can initiate interest payments by pressing the **Pay interest** button; *try it*
+ 
+ **Oracle Admin** shows a dashboard that allows you to interact with the Oracle. From here you ca:
+ * Set the value of 10 cents (USD) worth of ETH. (default is 330000000000000 wei)
+ * Set the address of the contract to alert when the oracle updates. (default is DollarBank contract address)
