@@ -104,6 +104,15 @@ And in MetaMask, you'll see the transaction listed.
 You'll also see the same transaction listed in Ganache under the "Transactions" section.
 Congratulations! You ar now on your way to a wealthier future :bowtie:
 
+**FUND THE BANK**
+Give the bank some seed money; starting capital to payout interests.
+1. In Metamask, select Account 1 (admin account)
+2. Click the **Send** button
+3. Enter bank contract address in **TO** field. 
+*Get bank address from welcome screen on app* or from ganache when you migrated.
+4. Enter 1 ETH (or another amount) in the **Amount** field.
+5. Click Next, and Confirm.
+
 **MAKE A DEPOSIT**
 1. Enter a deposit amount in ETH.
 2. Click the **Deposit** button
