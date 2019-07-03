@@ -95,9 +95,15 @@ Now we're ready to use our dapp!!
 2. You'll be prompted to approve the transaction by MetaMask. Click **Confirm** to approve the transaction.
 3. You'll see a new card created titled **Bank Account** with a current balace of 0 ETH.
 
-*Note: If you do not see the **Bank Accout** card, refresh the app in the browser.*
+*Note: If you do not see the **Bank Account** card, refresh the app in the browser.*
 
 And in MetaMask, you'll see the transaction listed.
 
 You'll also see the same transaction listed in Ganache under the "Transactions" section.
 Congratulations! You ar now on your way to a wealthier future :bowtie:
+
+**MAKE A DEPOSIT**
+1. Enter a deposit amount in ETH.
+2. Click the **Deposit** button
+3. Confirm the transaction in Metamask.
+4. Your bank account balance should be updated once the transaction is confirmed :)
