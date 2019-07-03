@@ -65,7 +65,6 @@ Once ganache is running, follow the below to setup the dapp.
 8. `npm start`
 
 ## Interacting with the dapp in a browser
-Now we're ready to use our dapp!
 
 ### Installing and configuring MetaMask
 The easiest way to interact with our dapp in a browser is through MetaMask, a browser extension for both Chrome and Firefox.
@@ -77,10 +76,7 @@ The easiest way to interact with our dapp in a browser is through MetaMask, a br
 5. In the box marked **Wallet Seed**, enter the mnemonic (12 word seed) that is displayed in Ganache.
 5. Enter a password below that and click OK.
 6. If all goes well, MetaMask should display a Congratulations screen. Click All Done.
-7. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows **Main Network** and select **Custom RPC**
-8. In the box titled **New Network** enter `http://127.0.0.1:8545` and click **Save**
-The network name at the top will switch to say `http://127.0.0.1:8545`
-9. Click the top-right X to close out of Settings and return to the Accounts page.
+7. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows **Main Network** and select **Localhost 8545**
 
 Each account created by Ganache is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run.
 
@@ -89,14 +85,16 @@ Configuration is now complete.
 ### Using the dapp
 1. Navigate to `localhost:3000`
 The dapp welcome screen is shown.
-2. Click on 'Connect using metamask' button.
+2. Click on **Connect with Metamask** button.
 3. A MetaMask pop-up should appear requesting your approval to allow Dollar Bank App to connect to your MetaMask wallet. Without explicit approval, you will be unable to interact with the dapp. Click **Connect**.
-4. To use the dapp, click the Enroll button at the bottom to enroll your current Metamask account.
-5. You'll be automatically prompted to approve the transaction by MetaMask. Click Submit to approve the transaction.
-6. You'll see a new card created titled 'Bank' with a current balace of 0 ETH.
-Note: If you do not see the 'Bank' card, refreshing the app in the browser should trigger it.
+
+Now we're ready to use our dapp!!
+
+First, **ENROLL AN ACCOUNT**
+1. Click the Enroll button at the bottom to enroll your current Metamask account.
+5. You'll be prompted to approve the transaction by MetaMask. Click **Confirm** to approve the transaction.
+6. You'll see a new card created titled **Bank Account** with a current balace of 0 ETH.
+Note: If you do not see the **Bank Accout** card, refresh the app in the browser.
 And in MetaMask, you'll see the transaction listed.
 You'll also see the same transaction listed in Ganache under the "Transactions" section.
 Congratulations! You ar now on your way to a wealthier future :bowtie:
-
-7. Enter an amount of ETH to deposit, and click 'Deposit'
