@@ -126,7 +126,7 @@ added to your account every 2 minutes!!! (DEMO purposes); In production, this wi
 
 * Also the value *(in USD)*, of your balances will change daily depending on the value of ETH on that day. This data is fed into the contract using an Oracle.
 
-* IMP !!! After getting your interests payments, and you try withdrawing your full balance, if you get an error stating that the "Bank doesn't have enough money" (lol) .. it's because the bank needs to keep ETH on hand to pay its customers so in reality such a bank needs to have a process in place to generate revenue. 
+* IMP !!! After getting your interests payments, and you try withdrawing your full balance, if you get an error stating that the "Bank cannot pay interest at the moment" (lol) .. it's because the bank needs to keep ETH on hand to pay its customers so in reality such a bank needs to have a process in place to generate revenue. 
 
 For our purposes, fund the bank with 1 ETH; using Metamask, simple send 1 ETH to the DollarBank contract address. That's it. The address is found when you *truffle migrated* earlier
 
