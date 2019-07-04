@@ -1,1 +1,1 @@
-## Design Pattern Decisions ##
+## Design pattern decisions ##
