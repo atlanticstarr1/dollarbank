@@ -1,17 +1,24 @@
-# Dollar Bank
+# DollarBank
 
+## Acknowledgement ##
+The Lighthouse contract in use was developed by Rhombus and can be viewed here https://github.com/RhombusNetwork/rhombus-public/tree/master/lighthouse
+
+## Description ##
 Welcome to dollar bank; a new concept in banking. This dapp is built using Ethereum smart contracts in Solidity, and React. Dollar bank pays interest on a daily basis to every customer who maintains a minimum of 1 USD balance. 
 
-The USD/ETH exchange rates are fed to the contract using a Rhombus Lighthouse Oracle. The rate fed to the contract is 10 cents (USD) worth of ETH, which can then be used to determine which customers get interests, by converting balances to USD and vice-versa.
+The USD/ETH exchange rates are fed to the contract using a Rhombus Lighthouse Oracle. The rate fed to the contract is 10 cents (USD) worth of ETH, which can then be used to determine which customers get interests, by converting balances to USD and vice-versa. 
+
+For this project, we will write data to the Lighthouse ourselves but in production, an actual Oracle will supply the data.
 
 ## Features
+  **General**
   * Enroll accounts
   * Make deposits (Min 1 USD to get interest)
   * Make Withdrawals
   * Close account (Entire balance will be sent to back to wallet)
   * Wait 2 mins to see interest paid to account. (In production, interest will be paid every 24 hrs).
   
-  ***ADMIN (Account 1)***
+  **Admin (Account 1)**
   * Change min balance
   * Change interest rate
   * Start/stop interest payments
@@ -134,11 +141,13 @@ Now for the cool part ... :grin:
 * If your balance is greater than or equal to the mininum balance *(default is 1 USD)* you will see interest being
 added to your account every 2 minutes!!! (DEMO purposes); In production, this will be changed to every 24 hrs.
 
+:bulb: *You can manually trigger interest payments as the Admin. Switch to Account 1 in Metamask and click on the **Bank Admin button** button at top of the app*
+
 * Also the value *(in USD)*, of your balances will change daily depending on the value of ETH on that day. This data is fed into the contract using an Oracle.
 
-* IMP !!! After getting your interests payments, and you try withdrawing your full balance, if you get an error stating that the "Bank cannot pay interest at the moment" (lol) .. it's because the bank needs to keep ETH on hand to pay its customers so in reality such a bank needs to have a process in place to generate revenue. *This is why you funded the bank with some ETH above.*
+* **IMP!!!** After getting your interests payments, and you try withdrawing your full balance, if you get an error stating that the *"Bank cannot pay interest at the moment"* ... it's because the bank needs to keep ETH on hand to pay its customers so in reality such a bank needs to have a process in place to generate revenue. 
 
-For our purposes, fund the bank with 1 ETH; using Metamask, simple send 1 ETH to the DollarBank contract address. That's it. The address is found when you *truffle migrated* earlier
+***This is why you funded the bank with some ETH above.***
 
 **CLOSE YOUR ACCOUNT**
 1. Click the **Close account** button.
