@@ -46,7 +46,7 @@ open up a new terminal, and run the following command:
 `ganache-cli -i 5777`
 
 This will spawn a new blockchain that listens on `127.0.0.1:8545` by default,
-with a network id of `5777` - needed by this dapp
+with a network id of `5777` (*needed by this dapp*)
 
 Once ganache is running, follow the below to setup the dapp.
 
@@ -94,12 +94,12 @@ Now we're ready to use our dapp!!
 ***Note the graceful alerts at the bottom right of the dapp as you interact with it***
 
 **FUND THE BANK**
-Give the bank some seed money; starting capital to payout interests.
+Give the bank some seed ETH; starting capital to payout interests.
 1. In Metamask, select Account 1 (admin account)
 2. Click the **Send** button
 3. Enter bank contract address in **TO** field. 
 *Get bank address from welcome screen on app* or from ganache when you migrated.
-4. Enter 1 ETH (or another amount) in the **Amount** field.
+4. Enter 1 ETH (or any amount) in the **Amount** field.
 5. Click Next, and Confirm.
 
 **ENROLL AN ACCOUNT**
@@ -136,7 +136,7 @@ added to your account every 2 minutes!!! (DEMO purposes); In production, this wi
 
 * Also the value *(in USD)*, of your balances will change daily depending on the value of ETH on that day. This data is fed into the contract using an Oracle.
 
-* IMP !!! After getting your interests payments, and you try withdrawing your full balance, if you get an error stating that the "Bank cannot pay interest at the moment" (lol) .. it's because the bank needs to keep ETH on hand to pay its customers so in reality such a bank needs to have a process in place to generate revenue. 
+* IMP !!! After getting your interests payments, and you try withdrawing your full balance, if you get an error stating that the "Bank cannot pay interest at the moment" (lol) .. it's because the bank needs to keep ETH on hand to pay its customers so in reality such a bank needs to have a process in place to generate revenue. *This is why you funded the bank with some ETH above.*
 
 For our purposes, fund the bank with 1 ETH; using Metamask, simple send 1 ETH to the DollarBank contract address. That's it. The address is found when you *truffle migrated* earlier
 
