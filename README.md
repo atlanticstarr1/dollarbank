@@ -130,7 +130,7 @@ Congratulations! You ar now on your way to a wealthier future :bowtie:
 
 **MAKE A WITHDRAWAL**
 1. Enter a withdrawal amount in ETH. 
-*(Tip: play with different amounts to see validations at work)*
+*(:point_right: play with different amounts to see validations at work)*
 2. Click the **Withdraw** button
 3. Confirm the transaction in Metamask.
 4. Notice your wallet(credited) and bank account(debited) balance update accordingly.
@@ -165,6 +165,6 @@ added to your account every 2 minutes!!! (DEMO purposes); In production, this wi
  * ... and maybe the most powerful feature, YOU can initiate interest payments by pressing the **Pay interest** button; *try it*
  
  **Oracle Admin** shows a dashboard that allows you to interact with the Lighthouse. From here you can:
- * Set the value of 10 cents (USD) worth of ETH. (default is 330000000000000 wei). 
- *Try it !!* .. and notice the USD value of your wallet and bank accounts change in real time :grin:
+ * Set the value of 10 cents (USD) worth of ETH. (default is 330000000000000 wei).
+ * :point_right:*Try it !!* .. and notice the USD value of your wallet and bank accounts change in real time :grin:
  * Set the address of the contract to alert when the oracle updates. (default is DollarBank contract address)
