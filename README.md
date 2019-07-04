@@ -164,7 +164,7 @@ added to your account every 2 minutes!!! (DEMO purposes); In production, this wi
  * You can also see all the accounts currently registered
  * ... and maybe the most powerful feature, YOU can initiate interest payments by pressing the **Pay interest** button; *try it*
  
- **Oracle Admin** shows a dashboard that allows you to interact with the Oracle. From here you can:
+ **Oracle Admin** shows a dashboard that allows you to interact with the Lighthouse. From here you can:
  * Set the value of 10 cents (USD) worth of ETH. (default is 330000000000000 wei). 
- *Try it !!* .. and notice the USD value of your wallet and bank accounts change in real time :grin:
+ :bulb: *Try it !!* .. and notice the USD value of your wallet and bank accounts change in real time :grin:
  * Set the address of the contract to alert when the oracle updates. (default is DollarBank contract address)
