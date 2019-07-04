@@ -141,7 +141,7 @@ Now for the cool part ... :grin:
 * If your balance is greater than or equal to the mininum balance *(default is 1 USD)* you will see interest being
 added to your account every 2 minutes!!! (DEMO purposes); In production, this will be changed to every 24 hrs.
 
-:bulb: *You can manually trigger interest payments as the Admin. Switch to Account 1 in Metamask and click on the **Bank Admin button** button at top of the app*
+:bulb:  *You can manually trigger interest payments as the Admin. Switch to Account 1 in Metamask and click on the **Bank Admin** button at top of the app*
 
 * Also the value *(in USD)*, of your balances will change daily depending on the value of ETH on that day. This data is fed into the contract using an Oracle.
 
