@@ -30,11 +30,11 @@ Once we have those installed, install Truffle:
 `npm install -g truffle`
 
 To verify that Truffle is installed properly, type `truffle version` on a terminal.
-If you see an error, make sure that your npm modules are added to your path.
 
 We also will be using Ganache, a personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests. 
+We use ganache-cli for this dapp but for those interested in the GUI version, you can download Ganache by navigating to http://truffleframework.com/ganache and clicking the "Download" button.
 
-Install ganache-cli
+Now install ganache-cli
 
 `npm install -g ganache-cli`
 
@@ -45,7 +45,8 @@ open up a new terminal, and run the following command:
 
 `ganache-cli -i 5777`
 
-This will spawn a new blockchain that listens on `127.0.0.1:8545` by default, with a network id of 5777.
+This will spawn a new blockchain that listens on `127.0.0.1:8545` by default,
+with a network id of `5777` - needed by this dapp
 
 Once ganache is running, follow the below to setup the dapp.
 
