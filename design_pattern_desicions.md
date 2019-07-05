@@ -28,3 +28,5 @@ e.g. when this dapp is stopped, users with balances can still withdraw their fun
 ***Library used:*** Pausable.sol from OpenZeppelin
 https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/lifecycle/Pausable.sol*
 
+NOTE: Other patterns may be implemented in a later version but the patterns above are deemed as most critical for a banking app.
+
