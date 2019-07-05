@@ -13,7 +13,7 @@ e.g.
 * Restricting access to user balances by making the `balances` state variable private.
 * Restrict function access so that only the owner is permitted to change interest rates, minimum balance, and pay interest.
 
-*Library used: Ownable from OpenZeppelin
+***Library used:*** Ownable from OpenZeppelin
 https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/ownership/Ownable.sol*
 
 ### Pull over Push Payments (a.k.a Withdrawal Pattern) ###
@@ -25,6 +25,6 @@ Circuit breaker contracts can be set up to permit certain functions in certain s
 
 e.g. when this dapp is stopped, users with balances can still withdraw their funds but enrollments, deposits, account closures, and interest payments are stopped.
 
-*Library used: Pausable.sol from OpenZeppelin
+***Library used:*** Pausable.sol from OpenZeppelin
 https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/lifecycle/Pausable.sol*
 
