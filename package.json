@@ -1,0 +1,27 @@
+{
+  "name": "dollarbankcontract",
+  "version": "1.0.0",
+  "description": "A banking smart contract built on ethereum that pays interests daily.",
+  "dependencies": {
+    "openzeppelin-solidity": "^2.3.0",
+    "truffle-hdwallet-provider": "^1.0.10"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atlanticstarr1/dollarbank.git"
+  },
+  "keywords": [
+    "smart",
+    "contract",
+    "bank",
+    "oracle",
+    "ethereum"
+  ],
+  "author": "David Noel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atlanticstarr1/dollarbank/issues"
+  },
+  "homepage": "https://github.com/atlanticstarr1/dollarbank#readme"
+}
