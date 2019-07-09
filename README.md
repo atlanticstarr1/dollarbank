@@ -18,7 +18,7 @@ For this project, we will write data to the Lighthouse ourselves but in producti
   * Close account (Entire balance will be sent to back to wallet)
   * Wait 2 mins to see interest paid to account. (In production, interest will be paid every 24 hrs).
   
-  **Admin (Account 1)**
+  **Admin/Contract creator (Account 1)**
   * Change min balance
   * Change interest rate
   * Start/stop interest payments
@@ -29,8 +29,8 @@ For this project, we will write data to the Lighthouse ourselves but in producti
 ## Setting up the development environment
 There are a few technical requirements before we start. Please install the following:
 
-* `Node.js v10+ LTS and npm (comes with Node)`
-* `Git`
+* `node.js v10+ LTS and npm (comes with Node)`
+* `git`
 
 Once we have those installed, install Truffle:
 
@@ -39,6 +39,7 @@ Once we have those installed, install Truffle:
 To verify that Truffle is installed properly, type `truffle version` on a terminal.
 
 We also will be using Ganache, a personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests. 
+
 We use ganache-cli for this dapp but for those interested in the GUI version, you can download Ganache by navigating to http://truffleframework.com/ganache and clicking the "Download" button.
 
 Now install ganache-cli
@@ -52,10 +53,9 @@ open up a new terminal, and run the following command:
 
 `ganache-cli -i 5777`
 
-This will spawn a new blockchain that listens on `127.0.0.1:8545` by default,
-with a network id of `5777` (*needed by this dapp*)
+This will spawn a new blockchain that listens on `127.0.0.1:8545` by default, with a network id of `5777` (*needed by this dapp*)
 
-Once ganache is running, follow the below to setup the dapp.
+**Ensure ganache is running before proceeding.**
 
 ## Installation
 > Clone the project
@@ -65,7 +65,7 @@ Once ganache is running, follow the below to setup the dapp.
 3. `truffle compile`
 > Migrate to ganache blockchain
 4. `truffle migrate --reset`
-> Test the smart contracts
+> Run tests. All tests should pass.
 5. `truffle test`
 > Install React app to interact with smart contract
 6. `cd app && npm install`
@@ -79,15 +79,15 @@ The easiest way to interact with our dapp in a browser is through MetaMask, a br
 1. Install MetaMask in your browser.
 2. Once installed, a tab in your browser should open, with a **Get Started** button
 3. After clicking Get Started, you should see the initial MetaMask screen. Click **Import Wallet**.
-4. Next, you should see a screen requesting anonymous analytics. Choose to decline or agree.
+4. Next, you should see a screen requesting anonymous analytics. Choose to ***decline*** or ***agree***.
 5. In the box marked **Wallet Seed**, enter the mnemonic (12 word seed) that is displayed in Ganache.
-5. Enter a password below that and click OK.
+5. Enter a password below that and click **OK**.
 6. If all goes well, MetaMask should display a Congratulations screen. Click All Done.
-7. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows **Main Network** and select **Localhost 8545**
+7. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows **Main Network** and select ***Localhost 8545***
 
 Each account created by Ganache is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run.
 
-Configuration is now complete.
+> Configuration is now complete.
 
 ### Using the dapp
 1. Navigate to `localhost:3000`
@@ -95,16 +95,19 @@ The dapp welcome screen is shown.
 2. Click on **Connect with Metamask** button.
 3. A MetaMask pop-up should appear requesting your approval to allow Dollar Bank App to connect to your MetaMask wallet. Without explicit approval, you will be unable to interact with the dapp. Click **Connect**.
 
-Now we're ready to use our dapp!!
+Now we're ready to use the dapp!!
 
-***Note the graceful alerts at the bottom right of the dapp as you interact with it***
+> Note the graceful alerts at the bottom right of the dapp as you
+> interact with it
 
 **FUND THE BANK**
 Give the bank some seed ETH; starting capital to payout interests.
 1. In Metamask, select Account 1 (admin account)
 2. Click the **Send** button
 3. Enter bank contract address in **TO** field. 
-*Get bank address from welcome screen on app* or from ganache when you migrated.
+
+> Get bank address from welcome screen on dapp or from ganache when you migrated.
+
 4. Enter 1 ETH (or any amount) in the **Amount** field.
 5. Click Next, and Confirm.
 
@@ -113,33 +116,33 @@ Give the bank some seed ETH; starting capital to payout interests.
 2. You'll be prompted to approve the transaction by MetaMask. Click **Confirm** to approve the transaction.
 3. You'll see a new card created titled **Bank Account** with a current balace of 0 ETH.
 
-*Note: If you do not see the **Bank Account** card, refresh the app in the browser.*
+> *Note: If you do not see the **Bank Account** card, refresh the app in the browser.*
 
 And in MetaMask, you'll see the transaction listed.
 
 You'll also see the same transaction listed in Ganache under the "Transactions" section.
-Congratulations! You ar now on your way to a wealthier future :bowtie:
+
+> Congratulations! You ar now on your way to a wealthier future :bowtie:
 
 **MAKE A DEPOSIT**
 1. Enter a deposit amount in ETH.
 2. Click the **Deposit** button
-3. Confirm the transaction in Metamask.
-4. Notice your wallet(debited) and bank account(credited) balance update accordingly. 
+3. **Confirm** the transaction in Metamask.
+4. Notice your wallet(***debited***) and bank account(***credited***) balance update accordingly. 
 *(May have slight delay based on confirmation speed)*
 
 **MAKE A WITHDRAWAL**
 1. Enter a withdrawal amount in ETH. 
 *(:point_right: play with different amounts to see validations at work)*
 2. Click the **Withdraw** button
-3. Confirm the transaction in Metamask.
-4. Notice your wallet(credited) and bank account(debited) balance update accordingly.
-
-Now for the cool part ... :grin:
+3. ***Confirm*** the transaction in Metamask.
+4. Notice your wallet(***credited***) and bank account(***debited***) balance update accordingly.
 
 **INTEREST PAYMENTS**
-* If your balance is greater than or equal to the mininum balance *(default is 1 USD)* you will see interest being
-added to your account everytime the Oracle writes to the Lighthouse!!!.
-In production, this will be happen every 24 hrs, but for demo purposes, we will write to the Lighthouse ourselves.
+If your balance is greater than or equal to the mininum balance (default is 1 USD) you will see interest being added to your account every time the Oracle writes to the Lighthouse!!!.
+
+> In production, this will be happen every 24 hrs, but for demo
+> purposes, we will write to the Lighthouse ourselves.
 
 ##### HOW TO WRITE TO THE LIGHTHOUSE
 There are 2 ways to write to the Lighthouse.
@@ -151,34 +154,38 @@ There are 2 ways to write to the Lighthouse.
 4. Click 'Update price' button.
 5. Confirm in Metamask ... and Voila !!
 6. ... Watch your bank balance grow. 
-***Note: you will only see your balance increase if you have at least the min balance deposited.***
+
+> Note: you will only see your balance increase if you have at least the min balance deposited.
 
 **HARD WAY**
 1. In Chrome/Firefox .. open remix ide (https://remix.ethereum.org)
 2. Create a new file called **Lighthouse.sol**
-3. Copy the Lighthouse.sol contract code from repo above ~/contracts/Lighthouse.sol and paste into file created in step 2.
-4. Click 'Compile' tab and select solidity version **0.5.10+commit.5a6ea5b1**.
-5. Check 'Auto compile' .. you should see 2 contracts highlighted below in 'green' (Lighthouse and Searcher).
-6. Switch to 'Run' tab ... i told you this was long :sweat:
-7. Select 'Injected Web3' for Environment (we are still using Metamask).
-8. Account should already be set to 'Account 1' from Metamask (admin/creator account).
+3. Copy the Lighthouse.sol contract code from repo above `~/contracts/Lighthouse.sol` and paste into file created in **step 2.**
+4. Click `Compile` tab and select solidity version **0.5.10+commit.5a6ea5b1**.
+5. Check `Auto compile` .. you should see 2 contracts highlighted below in green; ***(Lighthouse and Searcher).***
+6. Switch to `Run` tab ... i told you this was long :sweat:
+7. Select `Injected Web3` for Environment (we are still using Metamask).
+8. Account should already be set to **Account 1** from Metamask *(admin/creator account).*
 9. Leave the other options 'as is'
 10. Ensure **Lighthouse** contract is displayed in the contracts dropdown.
 11. Now, copy the **Lighthouse** contract address from when you tuffle migrated the contracts earlier.
-12. Paste this address in the **Load contract from address** field.
+12. Paste this address in the `Load contract from address` field.
 13. Select the **At Address** button
 14. You should now see the options to interact with the Lighthouse contract.
-15. In the **write** field, enter the price of 10 cents (USD) worth of ETH in wei, AND any random number
-for the nonce.
+15. In the **write** field, enter the price of 10 cents (USD) worth of ETH in wei, **AND** any random number for the nonce.
 16. Click the **write** button and confirm in Metamask.
-17. ... and watch your bank balance change :relieved:
+17. ... watch your bank balance change :relieved:
 
+You can also manually trigger interest payments as the Admin. 
+>1. Switch to Account 1 in Metamask
+>2. Click on the **Bank Admin** button at top of the dapp.
+>3. Click **Pay interest** and **Confirm** in Metamask.
 
-:bulb:  *You can manually trigger interest payments as the Admin. Switch to Account 1 in Metamask and click on the **Bank Admin** button at top of the dapp.* This functionality may become necessary if interest payments were missed for any reason.
+This functionality may become necessary if interest payments were missed for any reason.
 
-* Notice the value *(in USD)*, of your balances change depending on the value of ETH fed into the contract by the Lighthouse.
+> Notice the value *(in USD)* of your balances change depending on the value of ETH fed into the contract by the Lighthouse.
 
-* **IMP!!!** After getting your interests payments, and you try withdrawing your full balance, if you get an error stating that the *"Bank cannot pay interest at the moment"* ... it's because the bank needs to keep ETH on hand to pay its customers so in reality such a bank needs to have a process in place to generate revenue. 
+**_IMP!!!_** After getting your interests payments, if you try withdrawing your full balance, and you get an error stating that the *"Bank cannot pay interest at the moment"* ... it's because the bank needs to keep ETH on hand to pay its customers so in reality such a bank needs to have a process in place to generate revenue. 
 
 ***This is why you funded the bank with some ETH earlier.***
 
