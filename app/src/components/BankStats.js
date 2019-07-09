@@ -69,7 +69,7 @@ const BankStats = () => {
               </Flex>
             </Flex>
             <Box>
-              <PublicAddress address={contractAddress} />
+              <PublicAddress address={contractAddress} label="Bank address" />
             </Box>
           </Flex>
         </Box>
