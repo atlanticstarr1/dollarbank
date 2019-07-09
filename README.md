@@ -201,5 +201,5 @@ for the nonce.
  * Set the value of 10 cents (USD) worth of ETH. (default is 330000000000000 wei). 
     - This will first set the value of ten cents worth of ETH in the contract, then  
     - Trigger interest payemnts !!
-    -:point_right:*Try it !!* .. and notice your bank balance change in real time :grin:
+    - :point_right:*Try it !!* .. and notice your bank balance change in real time :grin:
  * Set the address of the contract to alert when the oracle updates. (default is DollarBank contract address)
