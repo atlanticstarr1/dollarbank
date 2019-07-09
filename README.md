@@ -139,6 +139,7 @@ You'll also see the same transaction listed in Ganache under the "Transactions" 
 4. Notice your wallet(***credited***) and bank account(***debited***) balance update accordingly.
 
 **INTEREST PAYMENTS**
+
 If your balance is greater than or equal to the mininum balance (default is 1 USD) you will see interest being added to your account every time the Oracle writes to the Lighthouse!!!.
 
 > In production, this will be happen every 24 hrs, but for demo
