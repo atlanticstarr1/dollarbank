@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.5.10;
 
 // for operation of this contract see the readme file.
 // Interpreting an address as an ILighthouse interface tells contracts that the following functions

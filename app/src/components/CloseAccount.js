@@ -1,13 +1,24 @@
 import React, { useState, useEffect } from "react";
 import useBankContract from "../utils/useBankContract";
-import { Flex, Button, Box, Modal, Card, Heading, Text } from "rimble-ui";
+import {
+  Flex,
+  Button,
+  Box,
+  Modal,
+  Card,
+  Heading,
+  Text,
+  Loader
+} from "rimble-ui";
 
 const CloseAccount = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const { account, closeAccount } = useBankContract();
 
   const handleClose = () => {
     closeAccount.send({ from: account });
+    setIsClosing(true);
   };
 
   const show = () => {
@@ -16,6 +27,7 @@ const CloseAccount = () => {
 
   const hide = () => {
     setIsOpen(false);
+    setIsClosing(false);
   };
 
   useEffect(() => {
@@ -49,9 +61,11 @@ const CloseAccount = () => {
             borderColor={"#E8E8E8"}
             justifyContent={"flex-end"}
           >
-            <Button.Outline onClick={hide}>Cancel</Button.Outline>
-            <Button ml={3} onClick={handleClose}>
-              Confirm
+            <Button.Outline onClick={hide} disabled={isClosing}>
+              Cancel
+            </Button.Outline>
+            <Button ml={3} onClick={handleClose} disabled={isClosing}>
+              {isClosing ? <Loader color="white" /> : "Confirm"}
             </Button>
           </Flex>
         </Card>

@@ -23,5 +23,18 @@ module.exports = {
       },
       network_id: 4
     }
+  },
+  compilers: {
+    solc: {
+      version: "/Users/dnoel/.nvm/versions/node/v10.13.0/lib/node_modules/solc"
+      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
+      // settings: {          // See the solidity docs for advice about optimization and evmVersion
+      //  optimizer: {
+      //    enabled: false,
+      //    runs: 200
+      //  },
+      //  evmVersion: "byzantium"
+      // }
+    }
   }
 };
