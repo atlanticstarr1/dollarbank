@@ -60,7 +60,7 @@ Once ganache is running, follow the below to setup the dapp.
 ## Installation
 > Clone the project
 1. `git clone https://github.com/atlanticstarr1/dollarbank.git`
-2. `cd dollarbank`
+2. `cd dollarbank && npm install`
 > Compile the contracts
 3. `truffle compile`
 > Migrate to ganache blockchain
@@ -68,9 +68,8 @@ Once ganache is running, follow the below to setup the dapp.
 > Test the smart contracts
 5. `truffle test`
 > Install React app to interact with smart contract
-6. `cd app`
-7. `npm install`
-8. `npm start`
+6. `cd app && npm install`
+7. `npm start`
 
 ## Interacting with the dapp in a browser
 
