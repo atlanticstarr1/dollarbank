@@ -138,15 +138,26 @@ Now for the cool part ... :grin:
 
 **INTEREST PAYMENTS**
 * If your balance is greater than or equal to the mininum balance *(default is 1 USD)* you will see interest being
-added to your account every 2 minutes!!! (DEMO purposes); In production, this will be changed to every 24 hrs.
+added to your account everytime the Oracle writes to the Lighthouse!!!; In production, this will be happen every 24 hrs, but for demo purposes, we will write to the Lighthouse ourselves.
 
-:bulb:  *You can manually trigger interest payments as the Admin. Switch to Account 1 in Metamask and click on the **Bank Admin** button at top of the app*
+HOW TO WRITE TO THE LIGHTHOUSE
+there are 2 ways to write to the Lighthouse.
+the EASY WAY
+1. Switch to Account 1 (Admin acct)
+2. Click the Oracle Admin button at the top of the dapp.
+3. Enter the price of 10 cents (USD) worth of ETH in wei.
+4. Click 'Update price' button.
+5. Confirm in Metamask ... and Voila !!
+6. ... Watch your bank balance grow. 
+***Note: you will only see your balance increase if you have at least the min balance deposited.***
 
-* Also the value *(in USD)*, of your balances will change daily depending on the value of ETH on that day. This data is fed into the contract using an Oracle.
+:bulb:  *You can manually trigger interest payments as the Admin. Switch to Account 1 in Metamask and click on the **Bank Admin** button at top of the dapp.* This functionality may become necessary if interest payments were missed for any reason.
+
+* Notice the value *(in USD)*, of your balances change depending on the value of ETH fed into the contract by the Lighthouse.
 
 * **IMP!!!** After getting your interests payments, and you try withdrawing your full balance, if you get an error stating that the *"Bank cannot pay interest at the moment"* ... it's because the bank needs to keep ETH on hand to pay its customers so in reality such a bank needs to have a process in place to generate revenue. 
 
-***This is why you funded the bank with some ETH above.***
+***This is why you funded the bank with some ETH earlier.***
 
 **CLOSE YOUR ACCOUNT**
 1. Click the **Close account** button.
