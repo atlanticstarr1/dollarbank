@@ -138,12 +138,13 @@ Now for the cool part ... :grin:
 
 **INTEREST PAYMENTS**
 * If your balance is greater than or equal to the mininum balance *(default is 1 USD)* you will see interest being
-added to your account everytime the Oracle writes to the Lighthouse!!!; In production, this will be happen every 24 hrs, but for demo purposes, we will write to the Lighthouse ourselves.
+added to your account everytime the Oracle writes to the Lighthouse!!!.
+In production, this will be happen every 24 hrs, but for demo purposes, we will write to the Lighthouse ourselves.
 
-### HOW TO WRITE TO THE LIGHTHOUSE
-there are 2 ways to write to the Lighthouse.
+##### HOW TO WRITE TO THE LIGHTHOUSE
+There are 2 ways to write to the Lighthouse.
 
-EASY WAY
+**EASY WAY**
 1. Switch to Account 1 (Admin acct)
 2. Click the Oracle Admin button at the top of the dapp.
 3. Enter the price of 10 cents (USD) worth of ETH in wei.
@@ -152,7 +153,7 @@ EASY WAY
 6. ... Watch your bank balance grow. 
 ***Note: you will only see your balance increase if you have at least the min balance deposited.***
 
-HARD WAY
+**HARD WAY**
 1. In Chrome/Firefox .. open remix ide (https://remix.ethereum.org)
 2. Create a new file called **Lighthouse.sol**
 3. Copy the Lighthouse.sol contract code from repo above ~/contracts/Lighthouse.sol and paste into file created in step 2.
@@ -197,6 +198,8 @@ for the nonce.
  * ... and maybe the most powerful feature, YOU can initiate interest payments by pressing the **Pay interest** button; *try it*
  
  **Oracle Admin** shows a dashboard that allows you to interact with the Lighthouse. From here you can:
- * Set the value of 10 cents (USD) worth of ETH. (default is 330000000000000 wei).
- * :point_right:*Try it !!* .. and notice the USD value of your wallet and bank accounts change in real time :grin:
+ * Set the value of 10 cents (USD) worth of ETH. (default is 330000000000000 wei). 
+    - This will first set the value of ten cents worth of ETH in the contract, then  
+    - Trigger interest payemnts !!
+    - :point_right:*Try it !!* .. and notice your bank balance change in real time :grin:
  * Set the address of the contract to alert when the oracle updates. (default is DollarBank contract address)
