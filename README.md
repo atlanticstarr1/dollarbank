@@ -187,8 +187,8 @@ for the nonce.
 3. Confirm the transaction in Metamask.
 4. Notice your wallet will be credited will the full bank account balance.
 
-### ADMIN ###
-* **Account 1** is the Administrator/Contract deployer address. As the admin, you will notice 2 buttons at the top of the Welcom card; **Bank Admin** and **Oracle Admin**.
+### ADMIN/CONTRACT CREATOR ###
+**Account 1** is the contract deployer address. As the admin, you will notice 2 buttons at the top of the Welcom card; **Bank Admin** and **Oracle Admin**.
 
 **Bank Admin** shows a dashboard that allows you to have FULL control of the bank contract. From here you can:
 * Pause the contract (circuit breaker pattern)
