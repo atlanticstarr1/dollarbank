@@ -140,7 +140,7 @@ Now for the cool part ... :grin:
 * If your balance is greater than or equal to the mininum balance *(default is 1 USD)* you will see interest being
 added to your account everytime the Oracle writes to the Lighthouse!!!; In production, this will be happen every 24 hrs, but for demo purposes, we will write to the Lighthouse ourselves.
 
-###HOW TO WRITE TO THE LIGHTHOUSE###
+### HOW TO WRITE TO THE LIGHTHOUSE
 there are 2 ways to write to the Lighthouse.
 
 EASY WAY
