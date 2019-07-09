@@ -140,9 +140,10 @@ Now for the cool part ... :grin:
 * If your balance is greater than or equal to the mininum balance *(default is 1 USD)* you will see interest being
 added to your account everytime the Oracle writes to the Lighthouse!!!; In production, this will be happen every 24 hrs, but for demo purposes, we will write to the Lighthouse ourselves.
 
-HOW TO WRITE TO THE LIGHTHOUSE
+###HOW TO WRITE TO THE LIGHTHOUSE###
 there are 2 ways to write to the Lighthouse.
-the EASY WAY
+
+EASY WAY
 1. Switch to Account 1 (Admin acct)
 2. Click the Oracle Admin button at the top of the dapp.
 3. Enter the price of 10 cents (USD) worth of ETH in wei.
@@ -150,6 +151,27 @@ the EASY WAY
 5. Confirm in Metamask ... and Voila !!
 6. ... Watch your bank balance grow. 
 ***Note: you will only see your balance increase if you have at least the min balance deposited.***
+
+HARD WAY
+1. In Chrome/Firefox .. open remix ide (https://remix.ethereum.org)
+2. Create a new file called **Lighthouse.sol**
+3. Copy the Lighthouse.sol contract code from repo above ~/contracts/Lighthouse.sol and paste into file created in step 2.
+4. Click 'Compile' tab and select solidity version **0.5.10+commit.5a6ea5b1**.
+5. Check 'Auto compile' .. you should see 2 contracts highlighted below in 'green' (Lighthouse and Searcher).
+6. Switch to 'Run' tab ... i told you this was long :sweat:
+7. Select 'Injected Web3' for Environment (we are still using Metamask).
+8. Account should already be set to 'Account 1' from Metamask (admin/creator account).
+9. Leave the other options 'as is'
+10. Ensure **Lighthouse** contract is displayed in the contracts dropdown.
+11. Now, copy the **Lighthouse** contract address from when you tuffle migrated the contracts earlier.
+12. Paste this address in the **Load contract from address** field.
+13. Select the **At Address** button
+14. You should now see the options to interact with the Lighthouse contract.
+15. In the **write** field, enter the price of 10 cents (USD) worth of ETH in wei, AND any random number
+for the nonce.
+16. Click the **write** button and confirm in Metamask.
+17. ... and watch your bank balance change :relieved:
+
 
 :bulb:  *You can manually trigger interest payments as the Admin. Switch to Account 1 in Metamask and click on the **Bank Admin** button at top of the dapp.* This functionality may become necessary if interest payments were missed for any reason.
 
