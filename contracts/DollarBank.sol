@@ -180,6 +180,13 @@ contract DollarBank is Ownable, Pausable, Searcher {
         interestRate = _rate;
     }
 
+    /// @notice Set ten cents (USD) worth of ETH.
+    /// @dev Rate capped at 1 ETH. Could change if ETH becomes extremely valuable.
+    function setTencentsOfEth(uint _rate) private {
+        require(_rate <= 1 ether, "rate should not exceed 1 ETH");
+        tenCents = _rate;
+    }
+
     /// @notice Set the minimum balance (USD, ETH) required to start receiving interest.
     function setMinBalance(uint _minBalance) public onlyOwner {
         require(_minBalance > 0, "balance should be greater than 0");
@@ -228,7 +235,7 @@ contract DollarBank is Ownable, Pausable, Searcher {
                 emit OracleDataNotValid();
                 return;
             }
-            tenCents = _tenCents;
+            setTencentsOfEth(_tenCents);
             updateMinBalanceEth();
             payInterest();
             //emit Poked(_tenCents);

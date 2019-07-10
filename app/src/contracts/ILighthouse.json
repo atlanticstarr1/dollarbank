@@ -88,25 +88,25 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.10+commit.5a6ea5b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"peekData\",\"outputs\":[{\"name\":\"v\",\"type\":\"uint128\"},{\"name\":\"b\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"read\",\"outputs\":[{\"name\":\"x\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"peek\",\"outputs\":[{\"name\":\"v\",\"type\":\"bytes32\"},{\"name\":\"ok\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"peekUpdated\",\"outputs\":[{\"name\":\"v\",\"type\":\"uint32\"},{\"name\":\"b\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"peekLastNonce\",\"outputs\":[{\"name\":\"v\",\"type\":\"uint32\"},{\"name\":\"b\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/dnoel/Documents/projects/consensys/finalproject/dollarbank/contracts/Ilighthouse.sol\":\"ILighthouse\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/dnoel/Documents/projects/consensys/finalproject/dollarbank/contracts/Ilighthouse.sol\":{\"keccak256\":\"0xdcf7d87a1b3bac1c7ee72f7711fbe9d24c03910fed5bcc27e5c9e989e15cda89\",\"urls\":[\"bzzr://c63e8ccc404caf63320b43009e021ae9f8be5d52479b2f7d7e4b129b9c891ac0\",\"dweb:/ipfs/QmcGh4g5dnFRA8Ly6X6YxHGhw9HXJYAL3N63z9pLGwLnsJ\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.10+commit.5a6ea5b1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"peekData\",\"outputs\":[{\"name\":\"v\",\"type\":\"uint128\"},{\"name\":\"b\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"read\",\"outputs\":[{\"name\":\"x\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"peek\",\"outputs\":[{\"name\":\"v\",\"type\":\"bytes32\"},{\"name\":\"ok\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"peekUpdated\",\"outputs\":[{\"name\":\"v\",\"type\":\"uint32\"},{\"name\":\"b\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"peekLastNonce\",\"outputs\":[{\"name\":\"v\",\"type\":\"uint32\"},{\"name\":\"b\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/David/Documents/Projects/finalproject/dollarbank/contracts/Ilighthouse.sol\":\"ILighthouse\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/David/Documents/Projects/finalproject/dollarbank/contracts/Ilighthouse.sol\":{\"keccak256\":\"0xdcf7d87a1b3bac1c7ee72f7711fbe9d24c03910fed5bcc27e5c9e989e15cda89\",\"urls\":[\"bzzr://c63e8ccc404caf63320b43009e021ae9f8be5d52479b2f7d7e4b129b9c891ac0\",\"dweb:/ipfs/QmcGh4g5dnFRA8Ly6X6YxHGhw9HXJYAL3N63z9pLGwLnsJ\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.10;\r\n\r\n// for operation of this contract see the readme file.\r\n// Interpreting an address as an ILighthouse interface tells contracts that the following functions\r\n// can be called at said address. Gives an error if there is no lighthouse to actually call at the address.\r\ninterface ILighthouse {\r\n\r\n    function peekData() external view returns (uint128 v,bool b);\r\n\r\n    function peekUpdated()  external view returns (uint32 v,bool b);\r\n\r\n    function peekLastNonce() external view returns (uint32 v,bool b);\r\n\r\n    function peek() external view returns (bytes32 v ,bool ok);\r\n\r\n    function read() external view returns (bytes32 x);\r\n}\r\n",
-  "sourcePath": "/Users/dnoel/Documents/projects/consensys/finalproject/dollarbank/contracts/Ilighthouse.sol",
+  "sourcePath": "C:\\Users\\David\\Documents\\Projects\\finalproject\\dollarbank\\contracts\\Ilighthouse.sol",
   "ast": {
-    "absolutePath": "/Users/dnoel/Documents/projects/consensys/finalproject/dollarbank/contracts/Ilighthouse.sol",
+    "absolutePath": "/C/Users/David/Documents/Projects/finalproject/dollarbank/contracts/Ilighthouse.sol",
     "exportedSymbols": {
       "ILighthouse": [
-        779
+        796
       ]
     },
-    "id": 780,
+    "id": 797,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 745,
+        "id": 762,
         "literals": [
           "solidity",
           "^",
@@ -122,9 +122,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 779,
+        "id": 796,
         "linearizedBaseContracts": [
-          779
+          796
         ],
         "name": "ILighthouse",
         "nodeType": "ContractDefinition",
@@ -132,28 +132,28 @@
           {
             "body": null,
             "documentation": null,
-            "id": 752,
+            "id": 769,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "peekData",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 746,
+              "id": 763,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "342:2:1"
             },
             "returnParameters": {
-              "id": 751,
+              "id": 768,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 748,
+                  "id": 765,
                   "name": "v",
                   "nodeType": "VariableDeclaration",
-                  "scope": 752,
+                  "scope": 769,
                   "src": "368:9:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -162,7 +162,7 @@
                     "typeString": "uint128"
                   },
                   "typeName": {
-                    "id": 747,
+                    "id": 764,
                     "name": "uint128",
                     "nodeType": "ElementaryTypeName",
                     "src": "368:7:1",
@@ -176,10 +176,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 750,
+                  "id": 767,
                   "name": "b",
                   "nodeType": "VariableDeclaration",
-                  "scope": 752,
+                  "scope": 769,
                   "src": "378:6:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -188,7 +188,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 749,
+                    "id": 766,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "378:4:1",
@@ -203,7 +203,7 @@
               ],
               "src": "367:18:1"
             },
-            "scope": 779,
+            "scope": 796,
             "src": "325:61:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -212,28 +212,28 @@
           {
             "body": null,
             "documentation": null,
-            "id": 759,
+            "id": 776,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "peekUpdated",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 753,
+              "id": 770,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "414:2:1"
             },
             "returnParameters": {
-              "id": 758,
+              "id": 775,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 755,
+                  "id": 772,
                   "name": "v",
                   "nodeType": "VariableDeclaration",
-                  "scope": 759,
+                  "scope": 776,
                   "src": "441:8:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -242,7 +242,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 754,
+                    "id": 771,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "441:6:1",
@@ -256,10 +256,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 757,
+                  "id": 774,
                   "name": "b",
                   "nodeType": "VariableDeclaration",
-                  "scope": 759,
+                  "scope": 776,
                   "src": "450:6:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -268,7 +268,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 756,
+                    "id": 773,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "450:4:1",
@@ -283,7 +283,7 @@
               ],
               "src": "440:17:1"
             },
-            "scope": 779,
+            "scope": 796,
             "src": "394:64:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -292,28 +292,28 @@
           {
             "body": null,
             "documentation": null,
-            "id": 766,
+            "id": 783,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "peekLastNonce",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 760,
+              "id": 777,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "488:2:1"
             },
             "returnParameters": {
-              "id": 765,
+              "id": 782,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 762,
+                  "id": 779,
                   "name": "v",
                   "nodeType": "VariableDeclaration",
-                  "scope": 766,
+                  "scope": 783,
                   "src": "514:8:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -322,7 +322,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 761,
+                    "id": 778,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "514:6:1",
@@ -336,10 +336,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 764,
+                  "id": 781,
                   "name": "b",
                   "nodeType": "VariableDeclaration",
-                  "scope": 766,
+                  "scope": 783,
                   "src": "523:6:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -348,7 +348,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 763,
+                    "id": 780,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "523:4:1",
@@ -363,7 +363,7 @@
               ],
               "src": "513:17:1"
             },
-            "scope": 779,
+            "scope": 796,
             "src": "466:65:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -372,28 +372,28 @@
           {
             "body": null,
             "documentation": null,
-            "id": 773,
+            "id": 790,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "peek",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 767,
+              "id": 784,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "552:2:1"
             },
             "returnParameters": {
-              "id": 772,
+              "id": 789,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 769,
+                  "id": 786,
                   "name": "v",
                   "nodeType": "VariableDeclaration",
-                  "scope": 773,
+                  "scope": 790,
                   "src": "578:9:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -402,7 +402,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 768,
+                    "id": 785,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "578:7:1",
@@ -416,10 +416,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 771,
+                  "id": 788,
                   "name": "ok",
                   "nodeType": "VariableDeclaration",
-                  "scope": 773,
+                  "scope": 790,
                   "src": "589:7:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -428,7 +428,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 770,
+                    "id": 787,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "589:4:1",
@@ -443,7 +443,7 @@
               ],
               "src": "577:20:1"
             },
-            "scope": 779,
+            "scope": 796,
             "src": "539:59:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -452,28 +452,28 @@
           {
             "body": null,
             "documentation": null,
-            "id": 778,
+            "id": 795,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "read",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 774,
+              "id": 791,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "619:2:1"
             },
             "returnParameters": {
-              "id": 777,
+              "id": 794,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 776,
+                  "id": 793,
                   "name": "x",
                   "nodeType": "VariableDeclaration",
-                  "scope": 778,
+                  "scope": 795,
                   "src": "645:9:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -482,7 +482,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 775,
+                    "id": 792,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "645:7:1",
@@ -497,31 +497,31 @@
               ],
               "src": "644:11:1"
             },
-            "scope": 779,
+            "scope": 796,
             "src": "606:50:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 780,
+        "scope": 797,
         "src": "294:365:1"
       }
     ],
     "src": "0:661:1"
   },
   "legacyAST": {
-    "absolutePath": "/Users/dnoel/Documents/projects/consensys/finalproject/dollarbank/contracts/Ilighthouse.sol",
+    "absolutePath": "/C/Users/David/Documents/Projects/finalproject/dollarbank/contracts/Ilighthouse.sol",
     "exportedSymbols": {
       "ILighthouse": [
-        779
+        796
       ]
     },
-    "id": 780,
+    "id": 797,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 745,
+        "id": 762,
         "literals": [
           "solidity",
           "^",
@@ -537,9 +537,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 779,
+        "id": 796,
         "linearizedBaseContracts": [
-          779
+          796
         ],
         "name": "ILighthouse",
         "nodeType": "ContractDefinition",
@@ -547,28 +547,28 @@
           {
             "body": null,
             "documentation": null,
-            "id": 752,
+            "id": 769,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "peekData",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 746,
+              "id": 763,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "342:2:1"
             },
             "returnParameters": {
-              "id": 751,
+              "id": 768,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 748,
+                  "id": 765,
                   "name": "v",
                   "nodeType": "VariableDeclaration",
-                  "scope": 752,
+                  "scope": 769,
                   "src": "368:9:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -577,7 +577,7 @@
                     "typeString": "uint128"
                   },
                   "typeName": {
-                    "id": 747,
+                    "id": 764,
                     "name": "uint128",
                     "nodeType": "ElementaryTypeName",
                     "src": "368:7:1",
@@ -591,10 +591,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 750,
+                  "id": 767,
                   "name": "b",
                   "nodeType": "VariableDeclaration",
-                  "scope": 752,
+                  "scope": 769,
                   "src": "378:6:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -603,7 +603,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 749,
+                    "id": 766,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "378:4:1",
@@ -618,7 +618,7 @@
               ],
               "src": "367:18:1"
             },
-            "scope": 779,
+            "scope": 796,
             "src": "325:61:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -627,28 +627,28 @@
           {
             "body": null,
             "documentation": null,
-            "id": 759,
+            "id": 776,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "peekUpdated",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 753,
+              "id": 770,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "414:2:1"
             },
             "returnParameters": {
-              "id": 758,
+              "id": 775,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 755,
+                  "id": 772,
                   "name": "v",
                   "nodeType": "VariableDeclaration",
-                  "scope": 759,
+                  "scope": 776,
                   "src": "441:8:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -657,7 +657,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 754,
+                    "id": 771,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "441:6:1",
@@ -671,10 +671,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 757,
+                  "id": 774,
                   "name": "b",
                   "nodeType": "VariableDeclaration",
-                  "scope": 759,
+                  "scope": 776,
                   "src": "450:6:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -683,7 +683,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 756,
+                    "id": 773,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "450:4:1",
@@ -698,7 +698,7 @@
               ],
               "src": "440:17:1"
             },
-            "scope": 779,
+            "scope": 796,
             "src": "394:64:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -707,28 +707,28 @@
           {
             "body": null,
             "documentation": null,
-            "id": 766,
+            "id": 783,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "peekLastNonce",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 760,
+              "id": 777,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "488:2:1"
             },
             "returnParameters": {
-              "id": 765,
+              "id": 782,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 762,
+                  "id": 779,
                   "name": "v",
                   "nodeType": "VariableDeclaration",
-                  "scope": 766,
+                  "scope": 783,
                   "src": "514:8:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -737,7 +737,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 761,
+                    "id": 778,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "514:6:1",
@@ -751,10 +751,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 764,
+                  "id": 781,
                   "name": "b",
                   "nodeType": "VariableDeclaration",
-                  "scope": 766,
+                  "scope": 783,
                   "src": "523:6:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -763,7 +763,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 763,
+                    "id": 780,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "523:4:1",
@@ -778,7 +778,7 @@
               ],
               "src": "513:17:1"
             },
-            "scope": 779,
+            "scope": 796,
             "src": "466:65:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -787,28 +787,28 @@
           {
             "body": null,
             "documentation": null,
-            "id": 773,
+            "id": 790,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "peek",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 767,
+              "id": 784,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "552:2:1"
             },
             "returnParameters": {
-              "id": 772,
+              "id": 789,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 769,
+                  "id": 786,
                   "name": "v",
                   "nodeType": "VariableDeclaration",
-                  "scope": 773,
+                  "scope": 790,
                   "src": "578:9:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -817,7 +817,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 768,
+                    "id": 785,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "578:7:1",
@@ -831,10 +831,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 771,
+                  "id": 788,
                   "name": "ok",
                   "nodeType": "VariableDeclaration",
-                  "scope": 773,
+                  "scope": 790,
                   "src": "589:7:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -843,7 +843,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 770,
+                    "id": 787,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "589:4:1",
@@ -858,7 +858,7 @@
               ],
               "src": "577:20:1"
             },
-            "scope": 779,
+            "scope": 796,
             "src": "539:59:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -867,28 +867,28 @@
           {
             "body": null,
             "documentation": null,
-            "id": 778,
+            "id": 795,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "read",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 774,
+              "id": 791,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "619:2:1"
             },
             "returnParameters": {
-              "id": 777,
+              "id": 794,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 776,
+                  "id": 793,
                   "name": "x",
                   "nodeType": "VariableDeclaration",
-                  "scope": 778,
+                  "scope": 795,
                   "src": "645:9:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -897,7 +897,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 775,
+                    "id": 792,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "645:7:1",
@@ -912,14 +912,14 @@
               ],
               "src": "644:11:1"
             },
-            "scope": 779,
+            "scope": 796,
             "src": "606:50:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 780,
+        "scope": 797,
         "src": "294:365:1"
       }
     ],
@@ -931,7 +931,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-07-09T15:21:52.537Z",
+  "updatedAt": "2019-07-10T02:51:07.384Z",
   "devdoc": {
     "methods": {}
   },
