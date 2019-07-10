@@ -10,6 +10,10 @@ The USD/ETH exchange rates are fed to the contract using a Rhombus Lighthouse Or
 
 For this project, we will write data to the Lighthouse ourselves but in production, an actual Oracle will supply the data.
 
+## Interest ##
+Interest payments are triggered everytime the Oracle updates the price in ETH for ten cents (USD), which will happen once per day in production. Payments can also be triggered by the contract administrator, should it become necessary. Daily interest is calculated using the formula:
+  - `Daily interest = Interest rate (%) / 365 * Balance`
+
 ## Features
   **General**
   * Enroll accounts
