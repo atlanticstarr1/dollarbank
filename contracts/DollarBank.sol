@@ -3,7 +3,7 @@ pragma solidity ^0.5.10;
 import 'openzeppelin-solidity/contracts/ownership/Ownable.sol';
 import 'openzeppelin-solidity/contracts/math/SafeMath.sol';
 import 'openzeppelin-solidity/contracts/lifecycle/Pausable.sol';
-import "../contracts/Ilighthouse.sol"; // Rhombus oracle
+import "../contracts/Ilighthouse.sol";
 import "../contracts/Lighthouse.sol";
 
 /// @title A bank contract that pays its users interest on a daily basis.
@@ -11,6 +11,7 @@ import "../contracts/Lighthouse.sol";
 /// @notice Interest is based on maintaining a minumum balance in USD, which
 /// is converted to ETH using a rate fed into the contract by an Oracle.
 /// The rate is 10 cents (USD) of ETH.
+/// @dev Daily interest = Interest Rate/365 * Balance
 contract DollarBank is Ownable, Pausable, Searcher {
     using SafeMath for uint256;
 
