@@ -82,7 +82,7 @@ This will spawn a new blockchain that listens on `127.0.0.1:8545` by default, wi
 ### Installing and configuring MetaMask
 The easiest way to interact with our dapp in a browser is through MetaMask, a browser extension for both Chrome and Firefox.
 
-1. Install MetaMask in your browser.
+1. Install MetaMask in your browser (https://metamask.io/)
 2. Once installed, a tab in your browser should open, with a **Get Started** button
 3. After clicking Get Started, you should see the initial MetaMask screen. Click **Import Wallet**.
 4. Next, you should see a screen requesting anonymous analytics. Choose to ***decline*** or ***agree***.
