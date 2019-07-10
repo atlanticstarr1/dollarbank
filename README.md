@@ -88,8 +88,8 @@ The easiest way to interact with our dapp in a browser is through MetaMask, a br
 4. Next, you should see a screen requesting anonymous analytics. Choose to ***decline*** or ***agree***.
 5. In the box marked **Wallet Seed**, enter the mnemonic (12 word seed) that is displayed in Ganache.
 5. Enter a password below that and click **OK**.
-6. If all goes well, MetaMask should display a Congratulations screen. Click All Done.
-7. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows **Main Network** and select ***Localhost 8545***
+6. If all goes well, MetaMask should display a **Congratulations screen**. Click All Done.
+7. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows **Main Ethereum Network** and select ***Localhost 8545***
 
 Each account created by Ganache is given 100 ether. You'll notice it's slightly less on the first & second account because some gas was used when the contract itself was deployed and when the tests were run.
 
