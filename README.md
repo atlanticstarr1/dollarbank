@@ -3,7 +3,7 @@
 ## Acknowledgement ##
 The Lighthouse contract in use was developed by Rhombus and can be viewed here https://github.com/RhombusNetwork/rhombus-public/tree/master/lighthouse
 
-Also, the idea for a bank was inspired by a simple bank exercise i completed by Consensys academy blockchain bootcamp course.
+Also, the idea for a bank was inspired by a simple bank exercise i completed by Consensys academy blockchain bootcamp.
 
 ## Description ##
 Welcome to dollar bank; a new concept in banking. This dapp is built using Ethereum smart contracts in Solidity, and React. Dollar bank pays interest on a daily basis to every customer who maintains a minimum of 1 USD balance. 
