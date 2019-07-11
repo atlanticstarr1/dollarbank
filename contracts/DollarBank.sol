@@ -177,14 +177,14 @@ contract DollarBank is Ownable, Pausable, Searcher {
 
     /// @notice Set the bank interest rate.
     function setInterestRate(uint _rate) public onlyOwner {
-        require(_rate <= 6, "rate should be no more than 6");
+        require(_rate >= 1 && _rate <= 6, "rate should be between 1 and 6");
         interestRate = _rate;
     }
 
     /// @notice Set ten cents (USD) worth of ETH.
     /// @dev Rate capped at 1 ETH. Could change if ETH becomes extremely valuable.
     function setTencentsOfEth(uint _rate) private {
-        require(_rate <= 1 ether, "rate should not exceed 1 ETH");
+        require(_rate >= 1 wei && _rate <= 1 ether, "rate should be between 1 wei and 1 ETH");
         tenCents = _rate;
     }
 

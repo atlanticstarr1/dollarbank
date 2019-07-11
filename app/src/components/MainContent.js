@@ -13,23 +13,23 @@ const MainContent = () => {
   useEffect(() => {
     console.log("status messages from main");
     debugger;
-    let events = contracts.DollarBank.events.filter(
-      a => a.event === "InterestPaid" || a.event === "OracleDataNotValid"
-    );
-    let lastEvent = events && events[events.length - 1];
+    let bankEvents = contracts.DollarBank.events;
+    // get last contract event
+    let lastbankEvent = bankEvents && bankEvents[bankEvents.length - 1];
     const lastTxId = transactionStack[transactionStack.length - 1];
     let lastTx = transactions[lastTxId];
     if (lastTx) {
-      if (lastTx.status === "error") {
-        showTransactionToast(null, lastTx);
-        return;
+      if (lastTx.receipt) {
+        // get last transaction event
+        let lastTxEvent = Object.values(lastTx.receipt.events)[0];
+        lastbankEvent && lastbankEvent.blockNumber >= lastTx.receipt.blockNumber
+          ? showTransactionToast(lastbankEvent)
+          : showTransactionToast(lastTxEvent || lastTx);
+      } else {
+        showTransactionToast(lastTx);
       }
-      let eventBlock = lastEvent ? lastEvent.blockNumber : -1;
-      let isNewer = lastTx.receipt.blockNumber >= eventBlock;
-      if (isNewer) showTransactionToast(null, lastTx);
-      else showTransactionToast(lastEvent, null);
-    } else if (!lastTxId && lastEvent) {
-      showTransactionToast(lastEvent, null);
+    } else if (!lastTxId && lastbankEvent) {
+      showTransactionToast(lastbankEvent, null);
     }
   }, [contracts.DollarBank.events, transactionStack, transactions]);
 
