@@ -1,8 +1,8 @@
 pragma solidity ^0.5.10;
 
-import 'openzeppelin-solidity/contracts/ownership/Ownable.sol';
-import 'openzeppelin-solidity/contracts/math/SafeMath.sol';
-import 'openzeppelin-solidity/contracts/lifecycle/Pausable.sol';
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
+import "openzeppelin-solidity/contracts/math/SafeMath.sol";
+import "openzeppelin-solidity/contracts/lifecycle/Pausable.sol";
 import "../contracts/Ilighthouse.sol";
 import "../contracts/Lighthouse.sol";
 
@@ -31,7 +31,7 @@ contract DollarBank is Ownable, Pausable, Searcher {
     ILighthouse  public myLighthouse;
     /// Array of users registered
     address[] private accounts;
-    mapping(address => uint) accountsIndex;
+    mapping(address => uint) private accountsIndex;
     /// Users balance.
     mapping (address => uint) private balances;
     /// Function to allow contracts to be able to see if a user is enrolled.
@@ -72,19 +72,19 @@ contract DollarBank is Ownable, Pausable, Searcher {
     /// Ensure user has enough balance to withdraw, and bank can pay user.
     modifier checkWithdraw(uint withdrawAmount){
         require(balances[msg.sender] >= withdrawAmount, "Insufficient balance");
-        require(address(this).balance >= balances[msg.sender],"Bank cannot pay interest at the moment");
+        require(address(this).balance >= balances[msg.sender], "Bank cannot pay interest at the moment");
         _;
     }
 
     /// Ensures sender is oracle.
     modifier onlyLighthouse {
-        require (msg.sender == address(myLighthouse), "Unauthorised");
+        require(msg.sender == address(myLighthouse), "Unauthorised");
         _;
     }
 
         /// Ensures interest payments are enabled
     modifier interestEnabled {
-        require (interestRunning, "Interest payments stopped.");
+        require(interestRunning, "Interest payments stopped.");
         _;
     }
 
@@ -138,7 +138,7 @@ contract DollarBank is Ownable, Pausable, Searcher {
         balances[msg.sender] = 0;
         enrolled[msg.sender] = false;
         removeAccount(msg.sender);
-        if(totalBalance > 0){
+        if (totalBalance > 0) {
             msg.sender.transfer(totalBalance);
         }
         emit ClosedAccount(msg.sender, totalBalance);
@@ -197,24 +197,24 @@ contract DollarBank is Ownable, Pausable, Searcher {
 
     /// @notice Start interest payments. Circuit breaker pattern used.
     function startPayments() public onlyOwner whenNotPaused {
-        if(!interestRunning){
-        interestRunning = true;
-        emit InterestStarted();
+        if (!interestRunning) {
+            interestRunning = true;
+            emit InterestStarted();
         }
     }
 
     /// @notice Stop interest payments. Circuit breaker pattern used.
     function stopPayments() public onlyOwner whenNotPaused {
-        if(interestRunning){
-        interestRunning = false;
-        emit InterestStopped();
+        if (interestRunning) {
+            interestRunning = false;
+            emit InterestStopped();
         }
     }
 
     /// @notice Pause the contract. This will disable enrollments, deposits and interest payments.
     /// Only withdrawals will be allowed
     function pauseContract() public onlyOwner {
-        if(interestRunning){
+        if (interestRunning) {
             interestRunning = false;
         }
         pause();
@@ -231,15 +231,14 @@ contract DollarBank is Ownable, Pausable, Searcher {
     function poke() public onlyLighthouse interestEnabled {
         bool _valid;
         uint _tenCents;
-            (_tenCents, _valid) = myLighthouse.peekData();
-            if (!_valid) {
-                emit OracleDataNotValid();
-                return;
-            }
-            setTencentsOfEth(_tenCents);
-            updateMinBalanceEth();
-            payInterest();
-            //emit Poked(_tenCents);
+        (_tenCents, _valid) = myLighthouse.peekData();
+        if (!_valid) {
+            emit OracleDataNotValid();
+            return;
+        }
+        setTencentsOfEth(_tenCents);
+        updateMinBalanceEth();
+        payInterest();
     }
 
     /// @notice Pays interest to every account once criteria is met
@@ -251,7 +250,7 @@ contract DollarBank is Ownable, Pausable, Searcher {
             /// get customer balance
             uint balance = balances[customerAddress];
             /// Customer is eligible for interest
-            if(balance != 0 && balance >= minBalanceEth){
+            if (balance != 0 && balance >= minBalanceEth) {
                 // Calculate interest per day
                 uint interest = (balance * interestRate).div(36500);
                 balances[customerAddress] = balances[customerAddress].add(interest);
@@ -286,7 +285,6 @@ contract DollarBank is Ownable, Pausable, Searcher {
     // Fallback function - Called if other functions don't match call or
     // sent ether without data
     function() external payable {
-        require(msg.data.length == 0, "data sent with message");
         emit Deposited(msg.sender, msg.value);
     }
 }

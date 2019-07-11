@@ -48,13 +48,15 @@ const ShowTransactions = () => {
           return null;
         } else {
           let value =
-            a.event === "Deposited" || a.event === "Withdrawn"
+            a.event === "Deposited" ||
+            a.event === "Withdrawn" ||
+            a.event === "ClosedAccount"
               ? parseFloat(a.returnValues[1] / 1e18).toFixed(4)
               : 0;
           let to =
             a.event === "Deposited"
               ? a.address
-              : a.event === "Withdrawn"
+              : a.event === "Withdrawn" || a.event === "ClosedAccount"
               ? a.returnValues[0]
               : "0x0000000000000000000000000000000000000000";
 
