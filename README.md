@@ -22,13 +22,13 @@ Interest payments are triggered everytime the Oracle updates the price in ETH fo
   * Make deposits (Min 1 USD to get interest)
   * Make Withdrawals
   * Close account (Entire balance will be sent to back to wallet)
-  * Wait 2 mins to see interest paid to account. (In production, interest will be paid every 24 hrs).
+  * Get interest daily by maintaining the min balance
   
   **Admin/Contract creator (Account 1)**
   * Change min balance
   * Change interest rate
   * Start/stop interest payments
-  * Pause/unpause contract (Only withdrawal and account closure will workd)
+  * Pause/unpause contract (only withdrawal will work)
   * Trigger interest payments
   * Write to Oracle (Powerful feature !!). In production this could be a trusted 3rd party like Rhombus.
 
