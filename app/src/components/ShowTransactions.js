@@ -26,7 +26,6 @@ const ShowTransactions = () => {
   };
 
   const getTxTime = async () => {
-    console.log("getting tx times");
     events &&
       (await Promise.all(events.map(item => getBlock(item.blockNumber)))).map(
         a => {
@@ -39,7 +38,6 @@ const ShowTransactions = () => {
   };
 
   const generateTableRow = () => {
-    console.log("in showtransactions.js");
     let row;
     row =
       events &&

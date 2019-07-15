@@ -24,7 +24,6 @@ const BankStats = () => {
     contractAddress,
     oneUsdEth
   } = useBankContract();
-  console.log(drizzleState.web3);
 
   return (
     <Card mx={"auto"} px={4} mb={1}>

@@ -37,6 +37,7 @@ There are a few technical requirements before we start. Please install the follo
 
 * `node.js v10+ LTS and npm (comes with Node)`
 * `git`
+* `solidity v0.5.10`
 
 Once we have those installed, install Truffle:
 
