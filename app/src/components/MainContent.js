@@ -29,7 +29,7 @@ const MainContent = () => {
         showTransactionToast(lastTx);
       }
     } else if (!lastTxId && lastbankEvent) {
-      showTransactionToast(lastbankEvent, null);
+      showTransactionToast(lastbankEvent);
     }
   }, [contracts.DollarBank.events, transactionStack, transactions]);
 

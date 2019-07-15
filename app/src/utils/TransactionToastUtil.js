@@ -2,19 +2,21 @@ import TransactionToastMessages from "./TransactionToastMessages";
 
 export const showTransactionToast = lastEvent => {
   debugger;
-  let { status, type, error } = lastEvent;
-  if (type === "mined") status = "success";
+  let { status, error, id } = lastEvent;
+  if (id && id.indexOf("log_") > -1) status = "success";
   let toastMeta = getTransactionToastMeta(status);
-  // parse for errors
+  // error
   if (error) {
     let errMsgs =
       error.message.search("revert") >= 0
         ? error.message.split("revert")
-        : error.message.split("Error: ");
+        : error.message.search("Error: ") >= 0
+        ? error.message.split("Error: ")
+        : error.message.split("message");
     let errMsg = errMsgs[errMsgs.length - 1];
     toastMeta.message = "Transaction failed";
     toastMeta.secondaryMessage = errMsg.trim();
-    // parse for sucess
+    // sucess
   } else if (status === "success") {
     const { event, returnValues } = lastEvent;
     if (event === "Withdrawn") {
