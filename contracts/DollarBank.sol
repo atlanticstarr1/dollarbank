@@ -3,8 +3,8 @@ pragma solidity ^0.5.10;
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "openzeppelin-solidity/contracts/math/SafeMath.sol";
 import "openzeppelin-solidity/contracts/lifecycle/Pausable.sol";
-import "../contracts/Ilighthouse.sol";
-import "../contracts/Lighthouse.sol";
+import "./Ilighthouse.sol";
+import "./Lighthouse.sol";
 
 /// @title A bank contract that pays its users interest on a daily basis.
 /// @author David Noel

@@ -2,5 +2,5 @@
 DollarBank contract was deployed to the Rinkeby testnet. Below are the addresses to the 2 contracts that make this dapp possible
 
 Network: Rinkeby
-DollarBank:
-Lighthouse:
+DollarBank:0x062E008c8b05E3F56943Ed4d5E88cE934DF68A11
+Lighthouse:0x531584376bD863fF52cbE07e4EA6FCe5AC3B2962
