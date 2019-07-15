@@ -8,7 +8,6 @@ const ShowBankBalance = ({ balanceEth }) => {
   const { oneUsdEth } = useBankContract();
 
   const calculateUsd = async () => {
-    console.log("calling getbalance");
     const usdPrice = ethToUsd(oneUsdEth, balanceEth);
     setBalUsd(usdPrice);
   };
