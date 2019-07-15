@@ -19382,15 +19382,15 @@
     "version": "0.5.10+commit.5a6ea5b1.Emscripten.clang"
   },
   "networks": {
-    "5777": {
+    "4": {
       "events": {},
       "links": {},
-      "address": "0x64489A1b8c4003B3A74A44992A925593E7d114BA",
-      "transactionHash": "0xb008e49b0b0a3f8ed888640aa3b30e2d17ac8f2753c1aac2f2698e9ff614463c"
+      "address": "0x393Fb63C0B34042487E0D4615c2c17B75777997d",
+      "transactionHash": "0xee9d2d9d00105ffe3d77bef6b621639feb487456d8cae7d88be3a9d00bd1a776"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-07-15T06:26:51.426Z",
+  "updatedAt": "2019-07-15T13:10:13.386Z",
   "devdoc": {
     "details": "Daily interest = Interest Rate/365 * Balance",
     "methods": {
