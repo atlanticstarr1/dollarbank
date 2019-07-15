@@ -13,7 +13,7 @@ module.exports = {
     rinkeby: {
       provider: function() {
         const mnemonic = fs
-          .readFileSync(".secret")
+          .readFileSync(__dirname + "/.secret")
           .toString()
           .trim();
         return new HDWalletProvider(
