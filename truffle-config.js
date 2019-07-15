@@ -26,8 +26,7 @@ module.exports = {
   },
   compilers: {
     solc: {
-      //version: "0.5.10"
-      version: "/Users/dnoel/.nvm/versions/node/v10.13.0/lib/node_modules/solc"
+      version: "0.5.10"
     }
   }
 };
