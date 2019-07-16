@@ -9,10 +9,6 @@ const Header = ({ profPic }) => {
     setShowProfile(!showProfile);
   };
 
-  // set default prof pic; dogeee!! shiba inu
-  if (!profPic) {
-    profPic = "QmYjh5NsDc6LwU3394NbB42WpQbGVsueVSBmod5WACvpte";
-  }
   return (
     <>
       <Flex bg="primary" p={1} justifyContent="center" mb={3}>
@@ -23,7 +19,9 @@ const Header = ({ profPic }) => {
         </Box>
         <Box mt={1}>
           <Button.Text size="small" onClick={toggleProfile}>
-            <Avatar src={`https://gateway.ipfs.io/ipfs/` + profPic} />
+            <Avatar
+              src={profPic ? `https://gateway.ipfs.io/ipfs/` + profPic : ""}
+            />
           </Button.Text>
         </Box>
       </Flex>
