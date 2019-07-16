@@ -1,2 +1,2 @@
-const requiredNetwork = 4;
+const requiredNetwork = 5777;
 export { requiredNetwork };

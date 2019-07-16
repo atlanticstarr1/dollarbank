@@ -5,10 +5,11 @@ import WalletBlock from "./WalletBlock";
 import BankBlock from "./BankBlock";
 import BankStats from "./BankStats";
 import AdminView from "./AdminView";
+import Header from "./Header";
 import { showTransactionToast } from "../utils/TransactionToastUtil";
 
 const MainContent = () => {
-  const { isOwner, drizzleState, contracts } = useBankContract();
+  const { isOwner, drizzleState, contracts, profilePic } = useBankContract();
   const { transactions, transactionStack } = drizzleState;
   useEffect(() => {
     console.log("status messages from main");
@@ -35,12 +36,9 @@ const MainContent = () => {
 
   return (
     <Flex flexDirection={"column"}>
-      {isOwner && (
-        <Box flex={1} mb={1}>
-          <AdminView />
-        </Box>
-      )}
+      <Header profPic={profilePic} />
       <Box flex={1}>
+        {isOwner && <AdminView />}
         <BankStats />
         <WalletBlock />
         <BankBlock />

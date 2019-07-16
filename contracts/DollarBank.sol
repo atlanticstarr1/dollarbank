@@ -36,6 +36,8 @@ contract DollarBank is Ownable, Pausable, Searcher {
     mapping (address => uint) private balances;
     /// Function to allow contracts to be able to see if a user is enrolled.
     mapping (address => bool) public enrolled;
+    /// Store IPFS hash of users profile pic
+    mapping (address => string) private profilePics;
 
     /// When a user signs up
     event Enrolled(address indexed accountAddress);
@@ -55,6 +57,8 @@ contract DollarBank is Ownable, Pausable, Searcher {
     //event Poked(uint _tenCentsEth);
     /// When oracle data is not valid
     event OracleDataNotValid();
+    /// When profile pic updates; IPFS hash changes
+    event ProfileUpdated(string _profIpfsHash);
 
     /// Check if user is enrolled.
     modifier isEnrolled(){
@@ -280,6 +284,20 @@ contract DollarBank is Ownable, Pausable, Searcher {
     /// @notice Set the minimum balance in ETH.
     function updateMinBalanceEth() private {
         minBalanceEth = minBalanceUsd * 10 * tenCents;
+    }
+
+    /// @notice Set hash of user's profile pic.
+    function setProfilePic(string memory _ipfsHash) public {
+        require(msg.sender != address(0), "address must be valid");
+        require(bytes(_ipfsHash).length > 0, "profile pic cannot be empty");
+        profilePics[msg.sender] = _ipfsHash;
+        emit ProfileUpdated(_ipfsHash);
+    }
+
+    /// @notice Get hash of the user's profile pic.
+    /// @return The ipfs hash of the user's profile picture.
+    function getProfilePic () public view returns (string memory) {
+        return profilePics[msg.sender];
     }
 
     // Fallback function - Called if other functions don't match call or

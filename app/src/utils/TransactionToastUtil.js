@@ -52,6 +52,9 @@ export const showTransactionToast = lastEvent => {
     } else if (event === "Unpaused") {
       toastMeta.message = `Contract unpaused`;
       toastMeta.secondaryMessage = `All features re-enabled`;
+    } else if (event === "ProfileUpdated") {
+      toastMeta.message = `Profile updated`;
+      toastMeta.secondaryMessage = returnValues[0];
     }
   }
 

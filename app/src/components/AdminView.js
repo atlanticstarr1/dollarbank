@@ -37,7 +37,7 @@ const AdminView = props => {
         </Box>
       </Flex>
       {showAdmin && (
-        <Card mx={"auto"}>
+        <Card mx={"auto"} mb={1}>
           <Heading.h4 mb={3}>Bank Admin</Heading.h4>
           <Flex mb={3}>
             <Box flex={1} mr={2}>
@@ -69,7 +69,7 @@ const AdminView = props => {
         </Card>
       )}
       {showOracle && (
-        <Card mx={"auto"}>
+        <Card mx={"auto"} mb={1}>
           <Heading.h4 mb={3}>Oracle Admin</Heading.h4>
           <Flex mb={3}>
             <Oracle />

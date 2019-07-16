@@ -79,6 +79,10 @@ const useBankContract = () => {
   const pauseContract = useCacheSend("DollarBank", "pauseContract");
   const unpauseContract = useCacheSend("DollarBank", "unPauseContract");
 
+  // profile updates via ipfs
+  const profilePic = useCacheCall("DollarBank", "getProfilePic");
+  const setProfilePic = useCacheSend("DollarBank", "setProfilePic");
+
   const allEvents = useCacheEvents(
     "DollarBank",
     "allEvents",
@@ -124,6 +128,8 @@ const useBankContract = () => {
     oneUsdEth,
     pauseContract,
     unpauseContract,
+    profilePic,
+    setProfilePic,
     allEvents
   };
 };
