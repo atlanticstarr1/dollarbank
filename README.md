@@ -32,6 +32,10 @@ Interest payments are triggered everytime the Oracle updates the price in ETH fo
   * Trigger interest payments
   * Write to Oracle (Powerful feature !!). In production this could be a trusted 3rd party like Rhombus.
 
+## Live Demo
+See a live demo here http://35.231.70.36:3000  
+You will be interacting with the dapp on the Rinkeby testnet, so ensure you have get some test ethers from here https://faucet.rinkeby.io/
+
 ## Setting up the development environment
 There are a few technical requirements before we start. Please install the following:
 
