@@ -1,12 +1,12 @@
 ## Deployed address ##
-DollarBank contract was deployed to the Rinkeby testnet. Below are the addresses to the 2 contracts that make this dapp possible
+DollarBank contract was deployed to the Rinkeby testnet. Below are the addresses to the 2 contracts that make this dapp possible.
 
 Network: Rinkeby
 
 DollarBank
-0x393Fb63C0B34042487E0D4615c2c17B75777997d
-https://rinkeby.etherscan.io/dapp/0x393Fb63C0B34042487E0D4615c2c17B75777997d
+0xC558dFcC78902FA1902228a3476eD77Ed108f508
+https://rinkeby.etherscan.io/dapp/0xc558dfcc78902fa1902228a3476ed77ed108f508
 
 Lighthouse
-0xd0f96a7a24649658930E4d5C7BB586c6ae681CDc
-https://rinkeby.etherscan.io/dapp/0xd0f96a7a24649658930e4d5c7bb586c6ae681cdc
+0x5A4a04f7787C4d13622B1f355c98BDA6E1B3928E
+https://rinkeby.etherscan.io/dapp/0x5a4a04f7787c4d13622b1f355c98bda6e1b3928e
