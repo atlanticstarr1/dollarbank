@@ -53,8 +53,6 @@ contract DollarBank is Ownable, Pausable, Searcher {
     event InterestStopped();
     // When interest is paid by bank
     event InterestPaid(uint _totalInterestPaid);
-    // When oracle updates the price of 10 cents worth of ETH.
-    //event Poked(uint _tenCentsEth);
     /// When oracle data is not valid
     event OracleDataNotValid();
     /// When profile pic updates; IPFS hash changes

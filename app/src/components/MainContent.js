@@ -12,8 +12,6 @@ const MainContent = () => {
   const { isOwner, drizzleState, contracts, profilePic } = useBankContract();
   const { transactions, transactionStack } = drizzleState;
   useEffect(() => {
-    console.log("status messages from main");
-    debugger;
     let bankEvents = contracts.DollarBank.events;
     // get last contract event
     let lastbankEvent = bankEvents && bankEvents[bankEvents.length - 1];

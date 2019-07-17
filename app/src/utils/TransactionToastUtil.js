@@ -1,7 +1,6 @@
 import TransactionToastMessages from "./TransactionToastMessages";
 
 export const showTransactionToast = lastEvent => {
-  debugger;
   let { status, error, id } = lastEvent;
   if (id && id.indexOf("log_") > -1) status = "success";
   let toastMeta = getTransactionToastMeta(status);

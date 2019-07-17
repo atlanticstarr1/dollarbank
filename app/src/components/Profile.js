@@ -20,7 +20,6 @@ const Profile = () => {
   };
 
   const handleImageChange = e => {
-    debugger;
     e.stopPropagation();
     e.preventDefault();
 

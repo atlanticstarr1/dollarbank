@@ -1,5 +1,6 @@
 import { drizzleReactHooks } from "drizzle-react";
 
+// For interacting with the Lighthouse oracle contract
 const useOracle = () => {
   const { useCacheCall, useCacheSend } = drizzleReactHooks.useDrizzle();
   let value = 0;
