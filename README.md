@@ -10,7 +10,7 @@ Welcome to dollar bank; a new concept in banking. This dapp is built using Ether
 
 The USD/ETH exchange rates are fed to the contract using a Rhombus Lighthouse Oracle. The rate fed to the contract is 10 cents (USD) worth of ETH, which can then be used to determine which customers get interests, by converting balances to USD and vice-versa. 
 
-For this project, we will write data to the Lighthouse ourselves but in production, an actual Oracle will supply the data.
+For this project, we will write data to the Lighthouse ourselves but in production, an actual Oracle will supply the data. Another very cool feature is users are able to add a profile pic which where the picture itself will be stored on IPFS and its hash will be stored in the smart contract.
 
 ## Interest ##
 Interest payments are triggered everytime the Oracle updates the price in ETH for ten cents (USD), which will happen once per day in production. Payments can also be triggered by the contract administrator, should it become necessary. Daily interest is calculated using the formula:
@@ -23,6 +23,7 @@ Interest payments are triggered everytime the Oracle updates the price in ETH fo
   * Make Withdrawals
   * Close account (Entire balance will be sent to back to wallet)
   * Get interest daily by maintaining the min balance
+  * Upload profile pic to IPFS
   
   **Admin/Contract creator (Account 1)**
   * Change min balance
@@ -33,8 +34,17 @@ Interest payments are triggered everytime the Oracle updates the price in ETH fo
   * Write to Oracle (Powerful feature !!). In production this could be a trusted 3rd party like Rhombus.
 
 ## Live Demo
-See a live demo here http://35.231.70.36:3000  
-You will be interacting with the dapp on the Rinkeby testnet, so ensure you have get some test ethers from here https://faucet.rinkeby.io/
+See a live demo here http://35.231.70.36:3000
+You will be interacting with the dapp on the **Rinkeby** testnet, so ensure you have get some test ethers from here https://faucet.rinkeby.io/
+
+## Contracts
+DollarBank  
+0xC558dFcC78902FA1902228a3476eD77Ed108f508  
+https://rinkeby.etherscan.io/dapp/0xc558dfcc78902fa1902228a3476ed77ed108f508
+
+Lighthouse  
+0x5A4a04f7787C4d13622B1f355c98BDA6E1B3928E  
+https://rinkeby.etherscan.io/dapp/0x5a4a04f7787c4d13622b1f355c98bda6e1b3928e
 
 ## Setting up the development environment
 There are a few technical requirements before we start. Please install the following:
@@ -205,6 +215,14 @@ This functionality may become necessary if interest payments were missed for any
 1. Click the **Close account** button.
 3. Confirm the transaction in Metamask.
 4. Notice your wallet will be credited will the full bank account balance.
+
+**UPLOAD PROFILE PIC TO IPFS**
+1. Click circular avatar on top right of dapp header.
+2. Click the **Choose file** button.
+3. Navigate to picture location on local computer and choose pic.
+4. Click **Save** button. (picture will now be uploaded to to IPFS).
+5. Once picture is saved to IPFS, a hash is returned. **Confirm** transaction in Metamask to save hash to contract.
+6. You may have to wait awhile to see the profile pic. Reading from IPFS sometimes is slow.
 
 ### ADMIN/CONTRACT CREATOR ###
 **Account 1** is the contract deployer address. As the admin, you will notice 2 buttons at the top of the Welcom card; **Bank Admin** and **Oracle Admin**.
