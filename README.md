@@ -251,8 +251,8 @@ This functionality may become necessary if interest payments were missed for any
 2. Confirm the transaction in Metamask.
 3. Notice your wallet will be credited will the full bank account balance.
 
-**ADD PROFILE PIC**
-File will be stored on IPFS, and its hash will be stored in the smart contract.
+**ADD PROFILE PIC**  
+File will be stored on IPFS, and its hash will be stored in the smart contract.  
 
 1. Click circular avatar on top right of dapp header.
 2. Click the **Choose file** button.
