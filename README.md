@@ -32,8 +32,12 @@ Interest payments are triggered everytime the Oracle updates the price in ETH fo
   * Pause/unpause contract (only withdrawal will work)
   * Trigger interest payments
   * Write to Oracle (Powerful feature !!). In production this could be a trusted 3rd party like Rhombus.
+  
+## Recording
+See a recording of intro, install, demo, and IPFS interactions here.  
+https://drive.google.com/open?id=1kNd92tpyV5OMNGhwwVP_yVX9SezVFPox
 
-## Live Demo
+## Demo
 See a live demo here http://35.231.70.36:3000  
 You will be interacting with the dapp on the **Rinkeby** testnet, so ensure you have get some test ethers from here https://faucet.rinkeby.io/
 
