@@ -260,7 +260,10 @@ File will be stored on IPFS, and its hash will be stored in the smart contract.
 4. Click **Save** button. **_(picture will now be uploaded to to IPFS)_**
 5. Once picture is saved to IPFS, a hash is returned. **Confirm** transaction in Metamask to save hash to contract.
 6. Toast message will display with IPFS hash of file.
-   **_You may have to wait awhile to see the profile pic. Reading from IPFS sometimes is slow._**
+7. Profile pic will display in avatar placeholder.  
+**_You may have to wait awhile to see the profile pic. Reading from IPFS sometimes is slow._**  
+Also, a hyperlink labelled ***Current profile pic*** will be displayed above the **Choose file** button once picture is saved.  
+*Click it* to load file from IPFS *(may be very slow to load at first)*
 
 ### ADMIN/CONTRACT CREATOR
 
