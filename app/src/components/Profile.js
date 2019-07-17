@@ -6,7 +6,7 @@ import { Button, Flex, Form, Loader } from "rimble-ui";
 const Profile = () => {
   const [buffer, setBuffer] = useState("");
   const [saving, setSaving] = useState(false);
-  const { setProfilePic, account } = useBankContract();
+  const { profilePic, setProfilePic, account } = useBankContract();
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -38,6 +38,15 @@ const Profile = () => {
   return (
     <Flex mb={3} alignSelf={"flex-end"}>
       <Form onSubmit={handleSubmit}>
+        {profilePic && (
+          <a
+            href={`https://gateway.ipfs.io/ipfs/` + profilePic}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Current profile pic
+          </a>
+        )}
         <Flex alignItems={"center"}>
           <Form.Input type="file" width={1} onChange={handleImageChange} />
           <Button
