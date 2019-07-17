@@ -8,9 +8,9 @@ Also, the idea for a bank was inspired by a simple bank exercise i completed by 
 ## Description ##
 Welcome to dollar bank; a new concept in banking. This dapp is built using Ethereum smart contracts in Solidity, and React. Dollar bank pays interest on a daily basis to every customer who maintains a minimum of 1 USD balance. 
 
-The USD/ETH exchange rates are fed to the contract using a Rhombus Lighthouse Oracle. The rate fed to the contract is 10 cents (USD) worth of ETH, which can then be used to determine which customers get interests, by converting balances to USD and vice-versa. 
+The USD/ETH exchange rates are fed to the contract using a **Rhombus Lighthouse Oracle**. The rate fed to the contract is 10 cents (USD) worth of ETH, which can then be used to determine which customers get interests, by converting balances to USD and vice-versa. 
 
-For this project, we will write data to the Lighthouse ourselves but in production, an actual Oracle will supply the data. Another very cool feature is users are able to add a profile pic which where the picture itself will be stored on IPFS and its hash will be stored in the smart contract.
+For this project, we will write data to the Lighthouse ourselves but in production, an actual Oracle will supply the data. Another very cool feature is users are able to add a profile pic which where the picture itself will be stored on **IPFS** and its hash will be stored in the smart contract.
 
 ## Interest ##
 Interest payments are triggered everytime the Oracle updates the price in ETH for ten cents (USD), which will happen once per day in production. Payments can also be triggered by the contract administrator, should it become necessary. Daily interest is calculated using the formula:
