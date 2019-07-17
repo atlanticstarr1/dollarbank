@@ -38,12 +38,12 @@ See a live demo here http://35.231.70.36:3000
 You will be interacting with the dapp on the **Rinkeby** testnet, so ensure you have get some test ethers from here https://faucet.rinkeby.io/
 
 ## Contracts
-DollarBank  
-0xC558dFcC78902FA1902228a3476eD77Ed108f508  
+**DollarBank**  
+**0xC558dFcC78902FA1902228a3476eD77Ed108f508**  
 https://rinkeby.etherscan.io/dapp/0xc558dfcc78902fa1902228a3476ed77ed108f508
 
-Lighthouse  
-0x5A4a04f7787C4d13622B1f355c98BDA6E1B3928E  
+**Lighthouse**  
+**0x5A4a04f7787C4d13622B1f355c98BDA6E1B3928E**
 https://rinkeby.etherscan.io/dapp/0x5a4a04f7787c4d13622b1f355c98bda6e1b3928e
 
 ## Setting up the development environment
