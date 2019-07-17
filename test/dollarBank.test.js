@@ -365,4 +365,13 @@ contract("DollarBank", function(accounts) {
     await lighthouse.write(dataValue, nonce);
     await catchRevert(mybank.payInterestOwner({ from: alice }));
   });
+
+    /// Store and retrieve user's profile pic ipfs hash
+    it("should store and retrieve ipfs hash", async () => {
+      const ipfsHashOfProfPic = 'QmYjh5NsDc6LwU3394NbB42WpQbGVsueVSBmod5WACvpte';
+      await mybank.setProfilePic(ipfsHashOfProfPic,{from:alice});
+      let ipfsHash = await mybank.getProfilePic({ from: alice});
+      assert.equal(ipfsHash,ipfsHashOfProfPic);
+  
+    });
 });
