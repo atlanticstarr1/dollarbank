@@ -51,9 +51,9 @@ https://rinkeby.etherscan.io/dapp/0xc558dfcc78902fa1902228a3476ed77ed108f508
 https://rinkeby.etherscan.io/dapp/0x5a4a04f7787c4d13622b1f355c98bda6e1b3928e
 
 ## EthPM/Libraries/External
-* ***OpenZeppelin (SafeMath, Pausable, Ownable)
-* ***Rhombus Lighthouse Oracle
-* ***IPFS
+* **OpenZeppelin (SafeMath, Pausable, Ownable)**
+* **Rhombus Lighthouse Oracle**
+* **IPFS**
 
 ## Setting up the development environment
 There are a few technical requirements before we start. Please install the following:
