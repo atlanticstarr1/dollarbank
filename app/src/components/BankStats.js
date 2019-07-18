@@ -58,19 +58,17 @@ const BankStats = () => {
         </Box>
       </Flex>
       <Flex mr={3}>
+        <Box mr={3}>
+          {contractAddress && (
+            <QR value={contractAddress} size={100} renderAs={"svg"} />
+          )}
+        </Box>
         <Box flex={1}>
-          <Flex alignItems={"flex-start"}>
-            <Flex mr={3}>
-              <Flex>
-                {contractAddress && (
-                  <QR value={contractAddress} size={100} renderAs={"svg"} />
-                )}
-              </Flex>
-            </Flex>
-            <Box>
-              <PublicAddress address={contractAddress} label="Bank address" />
-            </Box>
-          </Flex>
+          <PublicAddress
+            address={contractAddress}
+            label="Bank address"
+            width={1}
+          />
         </Box>
       </Flex>
     </Card>
